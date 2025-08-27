@@ -1,0 +1,115 @@
+{
+  "hero": {
+    "badge": "AI-Powered Fashion Video Creation",
+    "title": {
+      "line1": "Transform Your",
+      "line2": "Lookbook to Life"
+    },
+    "description": "Create stunning fashion videos from static images in seconds. AI-powered effects, transitions, and sound design at your fingertips.",
+    "cta": {
+      "primary": "Get Started",
+      "secondary": "Watch Demo"
+    }
+  },
+  "features": {
+    "title": "Professional Creative Effects",
+    "subtitle": "Apply cinematic effects used by editors, artists, and directors — instantly.",
+    "tagline": "No editing skills needed.",
+    "items": [
+      {
+        "title": "Cinematic Movement",
+        "description": "Professional zoom, pan, and dynamic camera motion effects",
+        "image": "/images/1.png",
+        "icon": "target"
+      },
+      {
+        "title": "Vintage Overlays",
+        "description": "Film grain and classic cinema texture effects",
+        "image": "/images/2.png",
+        "icon": "film"
+      },
+      {
+        "title": "Beyond Scroll",
+        "description": "Dynamic scroll-based animations for product details",
+        "image": "/images/3.png",
+        "icon": "circle"
+      },
+      {
+        "title": "Retro Filters",
+        "description": "VHS and Y2K-inspired visual effects",
+        "image": "/images/4.png",
+        "icon": "monitor"
+      },
+      {
+        "title": "Sound Design",
+        "description": "AI voice, ambient sound, and music layering",
+        "image": "/images/5.png",
+        "icon": "volume"
+      },
+      {
+        "title": "AI-Powered Auto Editing",
+        "description": "Clean, professional short video templates",
+        "image": "/images/6.png",
+        "icon": "sparkles"
+      }
+    ]
+  },
+  "howItWorks": {
+    "title": "Create Stunning Videos in 3 Steps",
+    "subtitle": "From lookbook to viral content in minutes",
+    "steps": [
+      {
+        "title": "Upload Images",
+        "description": "Drop your lookbook photos or fashion shoots"
+      },
+      {
+        "title": "Choose Style",
+        "description": "Select from trending video templates and effects"
+      },
+      {
+        "title": "Export & Share",
+        "description": "Download in any format for TikTok, Reels, or YouTube"
+      }
+    ]
+  },
+  "gallery": {
+    "title": "Trending Effects Gallery",
+    "subtitle": "Explore our collection of AI-powered fashion video effects",
+    "items": [
+      { "title": "Glitch Transition", "type": "Digital Effect" },
+      { "title": "Film Burn", "type": "Vintage Effect" },
+      { "title": "Neon Glow", "type": "Color Effect" },
+      { "title": "Mirror World", "type": "Transition" },
+      { "title": "VHS Retro", "type": "Filter" },
+      { "title": "Parallax Zoom", "type": "Motion Effect" },
+      { "title": "Prism Split", "type": "Creative Effect" },
+      { "title": "Speed Ramp", "type": "Time Effect" }
+    ]
+  },
+  "cta": {
+    "title": {
+      "line1": "Ready to Create Your First",
+      "line2": "Fashion Video?"
+    },
+    "subtitle": "Join thousands of fashion creators making viral content with AI",
+    "button": "Start Free Trial"
+  },
+  "footer": {
+    "tagline": "AI-Powered Fashion Video Creation Platform",
+    "sections": {
+      "product": {
+        "title": "Product",
+        "links": ["Features", "Pricing", "API"]
+      },
+      "company": {
+        "title": "Company",
+        "links": ["About", "Blog", "Careers"]
+      },
+      "legal": {
+        "title": "Legal",
+        "links": ["Privacy", "Terms"]
+      }
+    },
+    "copyright": "© 2024 VogueDrop. All rights reserved."
+  }
+}

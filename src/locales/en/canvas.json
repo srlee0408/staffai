@@ -1,0 +1,70 @@
+{
+  "header": {
+    "brand": "Vogue Drop",
+    "nav": {
+      "clip": "Clip",
+      "edit": "Edit",
+      "library": "Library"
+    }
+  },
+  "leftPanel": {
+    "image": "Image",
+    "effects": "Effects",
+    "prompter": "Prompter",
+    "promptPlaceholder": "Full body shot of Asian male model wearing Supreme streetwear, oversized box logo hoodie, graphic t-shirt, baggy cargo pants, Supreme cap.",
+    "buttons": {
+      "effect": "Effect",
+      "cameraAngle": "Camera Angle",
+      "model": "Model"
+    }
+  },
+  "controls": {
+    "generate": "Generate",
+    "duration": {
+      "3s": "3s",
+      "5s": "5s",
+      "10s": "10s"
+    },
+    "brushSize": "Size"
+  },
+  "library": {
+    "title": "Library",
+    "info": "Only favorited videos are permanently saved. Other videos are automatically deleted after 7 days.",
+    "searchPlaceholder": "Search clips...",
+    "to": "to"
+  },
+  "modals": {
+    "effect": {
+      "title": "Effects",
+      "categories": ["All", "Glitch", "Wave", "Distortion", "Liquid"]
+    },
+    "camera": {
+      "title": "Camera Angle",
+      "categories": ["All", "Portrait", "Full Body", "Close-up", "Dynamic"]
+    },
+    "model": {
+      "title": "Model",
+      "categories": ["All", "Slim", "Fit", "Sexy"]
+    },
+    "prompt": {
+      "title": "Prompt",
+      "prompt": "Prompt",
+      "negativePrompt": "Negative Prompt",
+      "promptPlaceholder": "Enter what you want to generate...",
+      "negativePromptPlaceholder": "Enter what you want to exclude...",
+      "promptHint": "Describe what you want in detail",
+      "negativePromptHint": "Describe what you want to exclude",
+      "cancel": "Cancel",
+      "apply": "Apply"
+    },
+    "segment": {
+      "title": "Image Segmentation",
+      "tools": "Tools",
+      "brush": "Brush",
+      "eraser": "Eraser",
+      "brushSize": "Brush Size",
+      "cancel": "Cancel",
+      "apply": "Apply"
+    }
+  }
+}
