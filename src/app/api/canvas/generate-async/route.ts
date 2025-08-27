@@ -108,4 +108,11 @@ export async function POST(request: NextRequest): Promise<NextResponse> {
           { status: 500 }
         );
       }
+    } catch (error) {
+      const userFriendlyMessage = getErrorMessage(error);
+      return NextResponse.json(
+        { error: userFriendlyMessage },
+        { status: 500 }
+      );
+    }
 }

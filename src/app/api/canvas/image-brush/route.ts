@@ -194,6 +194,16 @@ export async function POST(request: NextRequest): Promise<NextResponse> {
           { status: 500 }
         );
       }
+    } catch (error) {
+      const userFriendlyMessage = getErrorMessage(error);
+      return NextResponse.json(
+        { 
+          error: userFriendlyMessage,
+          success: false 
+        },
+        { status: 500 }
+      );
+    }
 }
 
 // OPTIONS 요청 처리 (CORS)
