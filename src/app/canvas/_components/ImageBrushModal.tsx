@@ -558,7 +558,7 @@ export function ImageBrushModal({
       const url = window.URL.createObjectURL(blob)
       const link = document.createElement('a')
       link.href = url
-      link.download = `voguedrop-image-brush-${Date.now()}.png`
+      link.download = `aistaff-image-brush-${Date.now()}.png`
       
       // Trigger download
       document.body.appendChild(link)
@@ -582,14 +582,14 @@ export function ImageBrushModal({
           appearance: none;
           width: 16px;
           height: 16px;
-          background: #38f47cf9;
+          background: #E9967A;
           cursor: pointer;
           border-radius: 50%;
         }
         input[type="range"]::-moz-range-thumb {
           width: 16px;
           height: 16px;
-          background: #38f47cf9;
+          background: #E9967A;
           cursor: pointer;
           border: none;
           border-radius: 50%;
@@ -611,7 +611,7 @@ export function ImageBrushModal({
           background: #6b7280;
         }
       `}</style>
-      <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/50 p-4">
+      <div className="fixed inset-0 z-[9999] flex items-center justify-center bg-black/50 p-4">
       {/* Main Modal with integrated Before/After */}
       <div className="bg-gray-800 rounded-xl w-full max-w-[1400px] max-h-[95vh] flex flex-col">
         {/* Header */}
@@ -729,7 +729,7 @@ export function ImageBrushModal({
                       ? 'text-black hover:opacity-90' 
                       : 'bg-gray-700 text-gray-300 hover:bg-gray-600'
                   }`}
-                  style={state.currentTool === 'brush' ? { backgroundColor: '#38f47cf9' } : {}}
+                  style={state.currentTool === 'brush' ? { backgroundColor: '#E9967A' } : {}}
                   onClick={() => selectTool('brush')}
                   disabled={state.isProcessing}
                 >
@@ -742,7 +742,7 @@ export function ImageBrushModal({
                       ? 'text-black hover:opacity-90' 
                       : 'bg-gray-700 text-gray-300 hover:bg-gray-600'
                   }`}
-                  style={state.currentTool === 'eraser' ? { backgroundColor: '#38f47cf9' } : {}}
+                  style={state.currentTool === 'eraser' ? { backgroundColor: '#E9967A' } : {}}
                   onClick={() => selectTool('eraser')}
                   disabled={state.isProcessing}
                 >
@@ -797,7 +797,7 @@ export function ImageBrushModal({
                   disabled={state.isProcessing}
                   className="flex-1 h-2 bg-gray-700 rounded-lg appearance-none cursor-pointer slider"
                   style={{
-                    background: `linear-gradient(to right, #38f47cf9 0%, #38f47cf9 ${((state.brushSettings.size - 5) / 95) * 100}%, #374151 ${((state.brushSettings.size - 5) / 95) * 100}%, #374151 100%)`
+                    background: `linear-gradient(to right, #E9967A 0%, #E9967A ${((state.brushSettings.size - 5) / 95) * 100}%, #374151 ${((state.brushSettings.size - 5) / 95) * 100}%, #374151 100%)`
                   }}
                 />
                 <span className="text-sm text-gray-400 w-10 text-right">
@@ -882,7 +882,7 @@ export function ImageBrushModal({
                     disabled={state.isProcessing}
                     className="w-full h-1.5 bg-gray-700 rounded-lg appearance-none cursor-pointer"
                     style={{
-                      background: `linear-gradient(to right, #38f47cf9 0%, #38f47cf9 ${((state.styleStrength || 1.0) - 0.5) * 100}%, #374151 ${((state.styleStrength || 1.0) - 0.5) * 100}%, #374151 100%)`
+                      background: `linear-gradient(to right, #E9967A 0%, #E9967A ${((state.styleStrength || 1.0) - 0.5) * 100}%, #374151 ${((state.styleStrength || 1.0) - 0.5) * 100}%, #374151 100%)`
                     }}
                   />
                   <div className="flex justify-between text-[10px] text-gray-500">
@@ -895,7 +895,7 @@ export function ImageBrushModal({
               {/* Generate Button */}
               <button
                 className="w-full px-4 py-2.5 text-black rounded-lg font-medium hover:opacity-90 transition-all disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center"
-                style={{ backgroundColor: '#38f47cf9' }}
+                style={{ backgroundColor: '#E9967A' }}
                 onClick={handleGenerate}
                 disabled={
                   state.isProcessing || 
@@ -940,7 +940,7 @@ export function ImageBrushModal({
                 <div className="w-full bg-gray-700 rounded-full h-2">
                   <div 
                     className="h-2 rounded-full transition-all duration-300"
-                    style={{ width: `${state.progress}%`, backgroundColor: '#38f47cf9' }}
+                    style={{ width: `${state.progress}%`, backgroundColor: '#E9967A' }}
                   />
                 </div>
                 {state.progress < 30 && (
@@ -957,7 +957,7 @@ export function ImageBrushModal({
                 <button
                   onClick={handleApplyResult}
                   className="flex-1 px-4 py-2 text-black rounded-lg font-medium hover:opacity-90 transition-all"
-                  style={{ backgroundColor: '#38f47cf9' }}
+                  style={{ backgroundColor: '#E9967A' }}
                 >
                   Apply Result
                 </button>

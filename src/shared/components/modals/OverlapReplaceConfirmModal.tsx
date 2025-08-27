@@ -45,7 +45,7 @@ export function OverlapReplaceConfirmModal({ isOpen, onClose, onConfirm }: Overl
             Cancel
           </button>
           <button
-            className="px-4 py-2 rounded bg-red-500 text-white hover:bg-red-600"
+            className="px-4 py-2 rounded bg-primary text-white hover:bg-primary/80"
             onClick={() => onConfirm(always)}
           >
             Replace

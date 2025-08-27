@@ -217,7 +217,7 @@ export function LibraryUpload({ onUploadComplete }: LibraryUploadProps) {
       )}
       
       {error && (
-        <div className="mt-2 p-2 bg-red-500/20 rounded text-xs text-red-400">
+        <div className="mt-2 p-2 bg-primary/20 rounded text-xs text-primary">
           {error}
         </div>
       )}

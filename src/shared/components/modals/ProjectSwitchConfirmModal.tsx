@@ -22,7 +22,7 @@ export function ProjectSwitchConfirmModal({
   if (!isOpen) return null;
 
   return (
-    <div className="fixed inset-0 z-[60] flex items-center justify-center">
+    <div className="fixed inset-0 z-[9999] flex items-center justify-center">
       {/* Backdrop */}
       <div 
         className="absolute inset-0 bg-black/80 backdrop-blur-sm"
@@ -54,7 +54,7 @@ export function ProjectSwitchConfirmModal({
           <div className="flex gap-3">
           <button
               onClick={onSave}
-              className="flex-1 px-4 py-2 bg-blue-600 hover:bg-blue-700 text-white font-medium rounded-lg transition-colors"
+              className="flex-1 px-4 py-2 bg-primary hover:bg-primary/80 text-white font-medium rounded-lg transition-colors"
             >
               Save
               </button>

@@ -129,7 +129,7 @@ export const LibraryCard = memo(function LibraryCard({
     >
       {/* Current Project Label */}
       {isCurrentProject && (
-        <div className="absolute top-0 left-0 right-0 z-20 bg-red-500 text-white text-xs font-bold text-center py-1 shadow-lg">
+        <div className="absolute top-0 left-0 right-0 z-20 bg-primary text-white text-xs font-bold text-center py-1 shadow-lg">
           CURRENT PROJECT
         </div>
       )}

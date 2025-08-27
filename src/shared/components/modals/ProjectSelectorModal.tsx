@@ -95,7 +95,7 @@ function ProjectCard({ project, isNew, onClick, onDelete }: ProjectCardProps) {
         {isHovered && !showDeleteConfirm && (
           <button
             onClick={handleDelete}
-            className="absolute top-2 right-2 p-1.5 bg-red-500/80 hover:bg-red-500 rounded-full transition-colors"
+            className="absolute top-2 right-2 p-1.5 bg-primary/80 hover:bg-primary rounded-full transition-colors"
           >
             <Trash2 className="w-4 h-4 text-white" />
           </button>
@@ -103,12 +103,12 @@ function ProjectCard({ project, isNew, onClick, onDelete }: ProjectCardProps) {
         
         {/* 삭제 확인 */}
         {showDeleteConfirm && (
-          <div className="absolute inset-0 bg-red-500/90 flex items-center justify-center">
+          <div className="absolute inset-0 bg-primary/90 flex items-center justify-center">
             <div className="text-white text-center">
               <p className="text-sm font-medium mb-2">Are you sure you want to delete?</p>
               <button
                 onClick={handleDelete}
-                className="px-3 py-1 bg-white text-red-500 rounded text-xs font-medium"
+                className="px-3 py-1 bg-white text-primary rounded text-xs font-medium"
               >
                 Delete
               </button>
@@ -205,7 +205,7 @@ export function ProjectSelectorModal({ isOpen, onClose, onNewProject }: ProjectS
   if (!isOpen) return null;
   
   return (
-    <div className="fixed inset-0 z-50 flex items-center justify-center">
+    <div className="fixed inset-0 z-[9999] flex items-center justify-center">
       {/* 백드롭 */}
       <div 
         className="absolute inset-0 bg-black/80 backdrop-blur-sm"
@@ -243,7 +243,7 @@ export function ProjectSelectorModal({ isOpen, onClose, onNewProject }: ProjectS
               <p className="text-red-400 mb-4">{error}</p>
               <button
                 onClick={loadProjects}
-                className="px-4 py-2 bg-blue-500 hover:bg-blue-600 text-white rounded-lg transition-colors"
+                className="px-4 py-2 bg-primary hover:bg-primary/80 text-white rounded-lg transition-colors"
               >
                 Retry
               </button>
