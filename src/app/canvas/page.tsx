@@ -2,9 +2,9 @@
 
 import React from 'react'
 import { CanvasProviders } from './_context/CanvasProviders'
-import { CanvasLayout } from './_components/CanvasLayout'
+import { CanvasLayout } from './_components'
+import { AuthGuard } from '@/shared/components/auth/AuthGuard'
 import { EffectsDataProvider } from './_hooks/useEffectsData'
-import { AuthGuard } from './_components/AuthGuard'
 
 /**
  * Canvas 페이지 엔트리 포인트

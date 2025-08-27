@@ -57,17 +57,41 @@ export async function middleware(request: NextRequest) {
   // Get user session
   const { data: { user } } = await supabase.auth.getUser()
 
-  // Check if user is trying to access protected routes
-  const protectedRoutes = ['/canvas', '/video-editor', '/history']
-  const isProtectedRoute = protectedRoutes.some(route => 
+  // Define public routes that don't require authentication
+  const publicRoutes = ['/', '/login', '/signup']
+  const publicApiRoutes = ['/api/auth', '/api/webhooks']
+  
+  const isPublicRoute = publicRoutes.some(route => {
+    // 루트 경로는 정확히 일치해야 함
+    if (route === '/') {
+      return request.nextUrl.pathname === '/'
+    }
+    // 다른 경로는 startsWith 사용
+    return request.nextUrl.pathname.startsWith(route)
+  })
+  
+  const isPublicApiRoute = publicApiRoutes.some(route => 
     request.nextUrl.pathname.startsWith(route)
   )
   
-  if (isProtectedRoute && !user) {
-    // Redirect to login if not authenticated
-    const loginUrl = new URL('/login', request.url)
-    loginUrl.searchParams.set('redirect', request.nextUrl.pathname)
-    return NextResponse.redirect(loginUrl)
+  // If user is not authenticated and trying to access a protected route
+  if (!user && !isPublicRoute && !isPublicApiRoute) {
+    // Redirect to login if not authenticated (only for non-API routes)
+    if (!request.nextUrl.pathname.startsWith('/api')) {
+      const loginUrl = new URL('/login', request.url)
+      loginUrl.searchParams.set('redirect', request.nextUrl.pathname)
+      return NextResponse.redirect(loginUrl)
+    }
+    // For protected API routes, return 401
+    return NextResponse.json(
+      { error: 'Authentication required' },
+      { status: 401 }
+    )
+  }
+  
+  // If user is authenticated and trying to access public routes, redirect to home
+  if (user && isPublicRoute) {
+    return NextResponse.redirect(new URL('/', request.url))
   }
   
   return response

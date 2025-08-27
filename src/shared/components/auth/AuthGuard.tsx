@@ -10,7 +10,7 @@ interface AuthGuardProps {
 }
 
 /**
- * AuthGuard - Canvas 페이지 인증 보호 컴포넌트
+ * AuthGuard - 전역 인증 보호 컴포넌트
  * 
  * 주요 역할:
  * 1. 사용자 인증 상태 확인

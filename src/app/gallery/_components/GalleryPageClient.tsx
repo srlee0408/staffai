@@ -2,6 +2,7 @@
 
 import { HomeHeader } from "@/app/(home)/_components/HomeHeader"
 import { useGalleryItems, useCategories, useGalleryRefresh } from '@/lib/hooks/useGalleryData'
+import { AuthGuard } from '@/shared/components/auth/AuthGuard'
 import type { EffectTemplateWithMedia, Category } from '@/shared/types/database'
 import React from 'react'
 
@@ -25,7 +26,7 @@ export function GalleryPageClient({
   const isRefreshing = itemsLoading || categoriesLoading
 
   return (
-    <>
+    <AuthGuard>
       <HomeHeader />
       {/* 리프레시 중 상태 표시 */}
       {isRefreshing && (
@@ -65,6 +66,6 @@ export function GalleryPageClient({
           />
         </svg>
       </button>
-    </>
+    </AuthGuard>
   )
 }
