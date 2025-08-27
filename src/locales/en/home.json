@@ -33,24 +33,6 @@
         "description": "AI-powered content creation for engaging product presentations and sales pitches",
         "image": "https://static.readdy.ai/image/6f7165cfe0b25edc582c9815e9f0cfd2/93773b76ae59ac7bfd13db2066b29692.png",
         "icon": "file-text"
-      },
-      {
-        "title": "Brand Promotion",
-        "description": "Let the avatar showcase your app to create a video",
-        "image": "https://static.readdy.ai/image/6f7165cfe0b25edc582c9815e9f0cfd2/0d472e0b03082f80c54d8fe55cac1680.png",
-        "icon": "monitor"
-      },
-      {
-        "title": "Product Marketing",
-        "description": "Let the avatar hold your product to create a video",
-        "image": "https://static.readdy.ai/image/6f7165cfe0b25edc582c9815e9f0cfd2/2033e4e0f1b05c0b15437291134ba565.png",
-        "icon": "shopping-bag"
-      },
-      {
-        "title": "Try-On Video",
-        "description": "Let the avatar wear your clothes to create a video",
-        "image": "https://static.readdy.ai/image/6f7165cfe0b25edc582c9815e9f0cfd2/ffc2821c43a0cd95dc2045d86549c8bb.png",
-        "icon": "sparkles"
       }
     ]
   },
