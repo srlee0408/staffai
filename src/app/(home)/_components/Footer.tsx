@@ -27,8 +27,11 @@ export function Footer({ texts }: FooterProps) {
       <div className="max-w-7xl mx-auto px-4 sm:px-6">
         <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
           <div className="col-span-2 md:col-span-1">
-            <div className="text-xl sm:text-2xl font-bold text-primary tracking-tight mb-4">
-              vogue drop
+            <div className="flex items-center space-x-3 mb-6">
+              <div className="w-8 h-8 bg-primary rounded-lg flex items-center justify-center">
+                <i className="ri-robot-line text-white text-lg"></i>
+              </div>
+              <span className="text-xl sm:text-2xl font-bold text-white tracking-tight">AISTAFF</span>
             </div>
             <p className="text-sm sm:text-base text-gray-400">
               {texts.tagline}

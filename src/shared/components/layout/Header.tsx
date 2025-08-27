@@ -119,8 +119,11 @@ export function Header({
   return (
     <header className="bg-background/95 backdrop-blur-sm py-4 px-6 flex justify-between items-center border-b border-border z-[9999]">
       <div className="flex items-center gap-6">
-        <Link href="/" className="text-2xl font-bold text-primary tracking-tight">
-          vogue drop
+        <Link href="/" className="flex items-center space-x-3 hover:opacity-80 transition-opacity">
+          <div className="w-8 h-8 bg-primary rounded-lg flex items-center justify-center">
+            <i className="ri-robot-line text-white text-lg"></i>
+          </div>
+          <span className="text-2xl font-bold text-white tracking-tight">AISTAFF</span>
         </Link>
         {activePage === 'edit' && (
           <div className="flex items-center gap-4">

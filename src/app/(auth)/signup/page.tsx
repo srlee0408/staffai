@@ -1,11 +1,20 @@
+import type { Metadata } from 'next'
 import { SignupForm } from './_components/SignupForm'
 import Link from 'next/link'
+
+export const metadata: Metadata = {
+  title: 'Sign Up',
+  description: 'Create your AISTAFF account to start building AI avatars and shopping experiences',
+}
 
 export default function SignupPage() {
   return (
     <div className="relative flex min-h-screen items-center justify-center px-4">
-      <Link href="/" className="absolute top-8 left-8 font-sans text-xl font-bold text-primary tracking-tight hover:opacity-80 transition-opacity">
-        vogue drop
+      <Link href="/" className="absolute top-8 left-8 flex items-center space-x-3 hover:opacity-80 transition-opacity">
+        <div className="w-8 h-8 bg-primary rounded-lg flex items-center justify-center">
+          <i className="ri-robot-line text-white text-lg"></i>
+        </div>
+        <span className="font-sans text-xl font-bold text-white tracking-tight">AISTAFF</span>
       </Link>
       
       <div className="relative mx-auto w-full max-w-md space-y-8">
@@ -14,7 +23,7 @@ export default function SignupPage() {
             Create your account
           </h1>
           <p className="mt-2 text-base text-text-secondary">
-            Join VogueDrop to start creating amazing fashion videos
+            Join AISTAFF to start creating AI avatars and shopping experiences
           </p>
         </div>
         

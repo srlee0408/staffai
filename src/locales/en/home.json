@@ -1,115 +1,114 @@
 {
   "hero": {
-    "badge": "AI-Powered Fashion Video Creation",
+    "badge": "AI Avatars for 24/7 Shopping Experiences",
     "title": {
-      "line1": "Transform Your",
-      "line2": "Lookbook to Life"
+      "line1": "AI Avatars Host",
+      "line2": "24/7 Shopping Podcasts In-Store & Online"
     },
-    "description": "Create stunning fashion videos from static images in seconds. AI-powered effects, transitions, and sound design at your fingertips.",
+    "description": "Create custom avatars, showcase products, and generate shopping videos. Embed real-time in stores and websites for seamless customer experiences.",
     "cta": {
-      "primary": "Get Started",
+      "primary": "Start Free",
       "secondary": "Watch Demo"
     }
   },
   "features": {
-    "title": "Professional Creative Effects",
-    "subtitle": "Apply cinematic effects used by editors, artists, and directors — instantly.",
-    "tagline": "No editing skills needed.",
+    "title": "Powerful Features",
+    "subtitle": "Everything you need to create engaging AI shopping experiences",
+    "tagline": "",
     "items": [
       {
-        "title": "Cinematic Movement",
-        "description": "Professional zoom, pan, and dynamic camera motion effects",
-        "image": "/images/1.png",
-        "icon": "target"
+        "title": "AI Avatar Generation",
+        "description": "Create lifelike avatars with customizable appearance, voice, and personality traits",
+        "image": "https://static.readdy.ai/image/6f7165cfe0b25edc582c9815e9f0cfd2/a5036119b847563d070a2300dd9d879d.png",
+        "icon": "robot"
       },
       {
-        "title": "Vintage Overlays",
-        "description": "Film grain and classic cinema texture effects",
-        "image": "/images/2.png",
-        "icon": "film"
+        "title": "Virtual Try-On",
+        "description": "Advanced AR technology for realistic product visualization and fitting",
+        "image": "https://static.readdy.ai/image/6f7165cfe0b25edc582c9815e9f0cfd2/d3ed0aed99871ef3daf58b5d4d8e877e.png",
+        "icon": "shirt"
       },
       {
-        "title": "Beyond Scroll",
-        "description": "Dynamic scroll-based animations for product details",
-        "image": "/images/3.png",
-        "icon": "circle"
+        "title": "Auto Script Generation",
+        "description": "AI-powered content creation for engaging product presentations and sales pitches",
+        "image": "https://static.readdy.ai/image/6f7165cfe0b25edc582c9815e9f0cfd2/93773b76ae59ac7bfd13db2066b29692.png",
+        "icon": "file-text"
       },
       {
-        "title": "Retro Filters",
-        "description": "VHS and Y2K-inspired visual effects",
-        "image": "/images/4.png",
+        "title": "Brand Promotion",
+        "description": "Let the avatar showcase your app to create a video",
+        "image": "https://static.readdy.ai/image/6f7165cfe0b25edc582c9815e9f0cfd2/0d472e0b03082f80c54d8fe55cac1680.png",
         "icon": "monitor"
       },
       {
-        "title": "Sound Design",
-        "description": "AI voice, ambient sound, and music layering",
-        "image": "/images/5.png",
-        "icon": "volume"
+        "title": "Product Marketing",
+        "description": "Let the avatar hold your product to create a video",
+        "image": "https://static.readdy.ai/image/6f7165cfe0b25edc582c9815e9f0cfd2/2033e4e0f1b05c0b15437291134ba565.png",
+        "icon": "shopping-bag"
       },
       {
-        "title": "AI-Powered Auto Editing",
-        "description": "Clean, professional short video templates",
-        "image": "/images/6.png",
+        "title": "Try-On Video",
+        "description": "Let the avatar wear your clothes to create a video",
+        "image": "https://static.readdy.ai/image/6f7165cfe0b25edc582c9815e9f0cfd2/ffc2821c43a0cd95dc2045d86549c8bb.png",
         "icon": "sparkles"
       }
     ]
   },
   "howItWorks": {
-    "title": "Create Stunning Videos in 3 Steps",
-    "subtitle": "From lookbook to viral content in minutes",
+    "title": "Real AI for Video Editing",
+    "subtitle": "Professional video editing powered by advanced AI technology",
     "steps": [
       {
-        "title": "Upload Images",
-        "description": "Drop your lookbook photos or fashion shoots"
+        "title": "AI Script",
+        "description": "Using GPT-4x, our tool learns from 5 million videos to write perfect scripts. Advanced language models ensure engaging and natural content creation."
       },
       {
-        "title": "Choose Style",
-        "description": "Select from trending video templates and effects"
+        "title": "AI-powered Clip Selection",
+        "description": "AI automatically understands, selects, and edits your video clips. Smart algorithms ensure perfect timing and seamless transitions."
       },
       {
-        "title": "Export & Share",
-        "description": "Download in any format for TikTok, Reels, or YouTube"
+        "title": "AI Voiceover",
+        "description": "OpenAI and ElevenLabs provide lifelike AI voices for professional, engaging video content. Multiple voice options and emotional tones available."
+      },
+      {
+        "title": "AI Avatars",
+        "description": "Our AI tool provides diverse avatars designed specifically for marketing. Create engaging presentations with realistic virtual hosts."
+      },
+      {
+        "title": "AI Auto-caption",
+        "description": "AI auto-generates diverse subtitle styles for viral short videos. Multiple caption styles and automatic language detection."
+      },
+      {
+        "title": "20+ Language Support",
+        "description": "Supports 20+ languages and AI voices for comprehensive video solutions. Global reach with localized content creation."
       }
     ]
   },
-  "gallery": {
-    "title": "Trending Effects Gallery",
-    "subtitle": "Explore our collection of AI-powered fashion video effects",
-    "items": [
-      { "title": "Glitch Transition", "type": "Digital Effect" },
-      { "title": "Film Burn", "type": "Vintage Effect" },
-      { "title": "Neon Glow", "type": "Color Effect" },
-      { "title": "Mirror World", "type": "Transition" },
-      { "title": "VHS Retro", "type": "Filter" },
-      { "title": "Parallax Zoom", "type": "Motion Effect" },
-      { "title": "Prism Split", "type": "Creative Effect" },
-      { "title": "Speed Ramp", "type": "Time Effect" }
-    ]
-  },
+
   "cta": {
     "title": {
-      "line1": "Ready to Create Your First",
-      "line2": "Fashion Video?"
+      "line1": "Ready to Transform Your",
+      "line2": "Customer Experience?"
     },
-    "subtitle": "Join thousands of fashion creators making viral content with AI",
+    "subtitle": "Join thousands of businesses using AI avatars to boost engagement and sales",
     "button": "Start Free Trial"
   },
   "footer": {
-    "tagline": "AI-Powered Fashion Video Creation Platform",
+    "tagline": "Transform your business with AI-powered shopping experiences that engage customers 24/7.",
     "sections": {
       "product": {
         "title": "Product",
-        "links": ["Features", "Pricing", "API"]
+        "links": ["Features", "Templates", "Integrations", "API"]
       },
       "company": {
         "title": "Company",
-        "links": ["About", "Blog", "Careers"]
+        "links": ["About", "Blog", "Careers", "Contact"]
       },
       "legal": {
         "title": "Legal",
-        "links": ["Privacy", "Terms"]
+        "links": ["Privacy Policy", "Terms of Service", "Cookie Policy", "GDPR"]
       }
     },
-    "copyright": "© 2024 VogueDrop. All rights reserved."
+    "copyright": "© 2025 AISTAFF. All rights reserved."
   }
 }

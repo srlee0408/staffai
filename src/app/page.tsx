@@ -1,41 +1,69 @@
+import type { Metadata } from "next"
 import { HeroSection } from "./(home)/_components/HeroSection"
+import { ViralMarketingSection } from "./(home)/_components/ViralMarketingSection"
 import { FeaturesSection } from "./(home)/_components/FeaturesSection"
-import { HowItWorksSection } from "./(home)/_components/HowItWorksSection"
-import { GallerySection } from "./(home)/_components/GallerySection"
+import { VideoEditingSection } from "./(home)/_components/VideoEditingSection"
+import { FAQSection } from "./(home)/_components/FAQSection"
 import { CTASection } from "./(home)/_components/CTASection"
 import { Footer } from "./(home)/_components/Footer"
 import homeTexts from "@/locales/en/home.json"
+
+export const metadata: Metadata = {
+  title: "AISTAFF - AI Avatars Host 24/7 Shopping Podcasts In-Store & Online",
+  description: "Create custom avatars, showcase products, and generate shopping videos. Embed real-time in stores and websites for seamless customer experiences. 100% AI-Generated Viral Marketing Videos.",
+  keywords: "AI avatars, 24/7 shopping, viral marketing videos, brand promotion, product marketing, try-on video, AI script generation, virtual try-on, auto script generation",
+  openGraph: {
+    title: "AISTAFF - AI Avatars Host 24/7 Shopping Podcasts In-Store & Online",
+    description: "Create custom avatars, showcase products, and generate shopping videos. Embed real-time in stores and websites for seamless customer experiences.",
+    images: [
+      {
+        url: "https://static.readdy.ai/image/6f7165cfe0b25edc582c9815e9f0cfd2/48ff4126c2f770b87a9e1803b78fef5c.png",
+        width: 1200,
+        height: 630,
+        alt: "AISTAFF AI Avatar Demo - Live Shopping Session",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "AISTAFF - AI Avatars Host 24/7 Shopping Podcasts",
+    description: "Create custom avatars, showcase products, and generate shopping videos. 100% AI-Generated Viral Marketing Videos.",
+    images: ["https://static.readdy.ai/image/6f7165cfe0b25edc582c9815e9f0cfd2/48ff4126c2f770b87a9e1803b78fef5c.png"],
+  },
+}
 
 // ISR (Incremental Static Regeneration) 설정
 // 60초마다 백그라운드에서 페이지를 재생성하여 데이터를 업데이트
 export const revalidate = 60
 
 /**
- * 홈페이지 - 모든 사용자 접근 가능 (공개 페이지)
+ * AISTAFF 홈페이지 - AI 아바타 쇼핑 경험 플랫폼
  * 
  * 주요 역할:
- * 1. 서비스 소개 및 주요 기능 안내
- * 2. 신규 사용자 유치 및 온보딩
- * 3. 갤러리 및 CTA 섹션으로 회원가입 유도
+ * 1. AI 아바타 기반 쇼핑 서비스 소개
+ * 2. 바이럴 마케팅 비디오 생성 기능 안내
+ * 3. AI 비디오 편집 기술 소개
+ * 4. FAQ를 통한 서비스 이해도 증진
  * 
  * 핵심 특징:
- * - 인증 없이 모든 사용자 접근 가능
- * - 서버 사이드 렌더링으로 SEO 최적화
- * - ISR로 성능과 최신 데이터 균형
- * - 반응형 디자인으로 모든 디바이스 지원
+ * - AI 아바타가 24/7 쇼핑 팟캐스트 진행
+ * - 100% AI 생성 바이럴 마케팅 비디오
+ * - 실시간 매장 및 웹사이트 임베딩
+ * - 다국어 지원 (20개 이상 언어)
  * 
  * 주의사항:
- * - 공개 페이지이므로 민감한 정보 노출 금지
- * - CTA 버튼을 통해 회원가입/로그인 유도
- * - 서버 컴포넌트로 SEO 및 성능 최적화
+ * - AISTAFF 브랜딩 일관성 유지
+ * - AI 기술의 전문성과 신뢰성 강조
+ * - 사용자 친화적 FAQ 제공
  */
 export default function HomePage() {
   return (
     <div className="min-h-screen bg-black text-white">
       <HeroSection texts={homeTexts.hero} />
+      <ViralMarketingSection />
       <FeaturesSection texts={homeTexts.features} />
-      <HowItWorksSection />
-      <GallerySection texts={homeTexts.gallery} />
+      <VideoEditingSection texts={homeTexts.howItWorks} />
+      <FAQSection />
       <CTASection texts={homeTexts.cta} />
       <Footer texts={homeTexts.footer} />
     </div>

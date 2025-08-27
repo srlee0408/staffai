@@ -148,7 +148,7 @@ export function LibraryModalBase({ isOpen, onClose, config }: LibraryModalBasePr
     // 다른 탭 간 BroadcastChannel 리스너
     let broadcastChannel: BroadcastChannel | null = null;
     try {
-      broadcastChannel = new BroadcastChannel('voguedrop-clips');
+      broadcastChannel = new BroadcastChannel('aistaff-clips');
       
       const handleBroadcastMessage = (event: MessageEvent) => {
         if (event.data.type === 'canvas-clip-completed') {
@@ -293,21 +293,21 @@ export function LibraryModalBase({ isOpen, onClose, config }: LibraryModalBasePr
       itemId = clip.job_id || String(clip.id);
       const date = new Date(clip.created_at).toISOString().split('T')[0];
       const effectName = clip.selected_effects[0]?.name.toLowerCase().replace(/\s+/g, '-') || 'video';
-      filename = `voguedrop_${date}_${effectName}.mp4`;
+      filename = `aistaff_${date}_${effectName}.mp4`;
     } else if (type === 'project') {
       const project = item as LibraryProject;
       url = project.latest_video_url;
       itemId = String(project.id);
       const date = new Date(project.updated_at).toISOString().split('T')[0];
       const projectName = project.project_name.toLowerCase().replace(/\s+/g, '-');
-      filename = `voguedrop_project_${date}_${projectName}.mp4`;
+      filename = `aistaff_project_${date}_${projectName}.mp4`;
     } else {
       const upload = item as UserUploadedVideo & { url?: string };
       url = upload.url;
       itemId = String(upload.id);
       const date = new Date(upload.uploaded_at).toISOString().split('T')[0];
       const fileName = upload.file_name.toLowerCase().replace(/\s+/g, '-');
-      filename = `voguedrop_upload_${date}_${fileName}`;
+      filename = `aistaff_upload_${date}_${fileName}`;
     }
     
     if (!url || downloadingVideos.has(itemId)) return;
@@ -564,7 +564,7 @@ export function LibraryModalBase({ isOpen, onClose, config }: LibraryModalBasePr
                   {filteredItems.projects.map((project, index) => {
                     const isSelected = selectedItems.has(project.id.toString());
                     const selectionOrder = selectedItems.get(project.id.toString());
-                    const selectionColor = config.theme?.selectionColor || '#38f47cf9';
+                    const selectionColor = config.theme?.selectionColor || '#8dd3c7'; // AISTAFF Secondary
                     
                     return (
                       <div 
@@ -617,7 +617,7 @@ export function LibraryModalBase({ isOpen, onClose, config }: LibraryModalBasePr
                   {filteredItems.uploads.map((upload, index) => {
                     const isSelected = selectedItems.has(upload.id.toString());
                     const selectionOrder = selectedItems.get(upload.id.toString());
-                    const selectionColor = config.theme?.selectionColor || '#38f47cf9';
+                    const selectionColor = config.theme?.selectionColor || '#8dd3c7'; // AISTAFF Secondary
                     
                     return (
                       <div 
@@ -682,7 +682,7 @@ export function LibraryModalBase({ isOpen, onClose, config }: LibraryModalBasePr
                     disabled={isAdding}
                     className="px-4 py-2 rounded-lg font-medium transition-colors disabled:opacity-50 disabled:cursor-not-allowed"
                     style={{
-                      backgroundColor: config.theme?.primaryColor || '#38f47cf9',
+                      backgroundColor: config.theme?.primaryColor || '#E9967A', // AISTAFF Primary
                       color: config.theme?.primaryColor?.startsWith('#38') ? 'black' : 'white'
                     }}
                   >

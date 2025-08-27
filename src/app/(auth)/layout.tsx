@@ -2,10 +2,10 @@ import type { Metadata } from 'next'
 
 export const metadata: Metadata = {
   title: {
-    template: '%s | VogueDrop',
+    template: '%s | AISTAFF',
     default: 'Authentication',
   },
-  description: 'Sign in or create an account to start creating amazing fashion videos',
+  description: 'Sign in or create an account to start creating AI avatars and shopping experiences',
 }
 
 export default function AuthLayout({

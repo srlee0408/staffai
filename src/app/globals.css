@@ -5,6 +5,9 @@
 /* Google Fonts 웹폰트 import - 전역 적용 */
 @import '../styles/fonts.css';
 
+/* Remix Icon CSS */
+@import url('https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.6.0/remixicon.min.css');
+
 @layer base {
   :root {
     /* Font Families for Text Editor */
@@ -35,9 +38,9 @@
     --card-foreground: 255 255 255;
     --popover: 17 24 39;
     --popover-foreground: 255 255 255;
-    --primary: 56 244 124;
-    --primary-foreground: 17 24 39;
-    --secondary: 52 199 89;
+    --primary: 233 150 122; /* #E9967A - STAFF AI Orange */
+    --primary-foreground: 255 255 255;
+    --secondary: 141 211 199; /* #8dd3c7 - STAFF AI Mint */
     --secondary-foreground: 255 255 255;
     --muted: 31 41 55;
     --muted-foreground: 156 163 175;
@@ -47,7 +50,7 @@
     --destructive-foreground: 255 255 255;
     --border: 55 65 81;
     --input: 55 65 81;
-    --ring: 56 244 124;
+    --ring: 233 150 122; /* #E9967A - STAFF AI Orange */
     
     /* Surface Colors */
     --surface: 17 24 39;

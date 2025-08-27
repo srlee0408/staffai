@@ -34,11 +34,20 @@ export function HomeHeader({ texts = { login: "Login", getStarted: "Get Started"
         <div className="flex items-center justify-between">
           <Link 
             href="/" 
-            className="font-sans text-xl sm:text-2xl font-bold text-primary tracking-tight hover:opacity-80 transition-opacity"
+            className="flex items-center space-x-3 hover:opacity-80 transition-opacity"
           >
-            vogue drop
+            <div className="w-8 h-8 bg-primary rounded-lg flex items-center justify-center">
+              <i className="ri-robot-line text-white text-lg"></i>
+            </div>
+            <span className="font-sans text-xl sm:text-2xl font-bold text-white tracking-tight">AISTAFF</span>
           </Link>
           <nav className="hidden md:flex items-center gap-8">
+            <Link
+              href="/#video-editing"
+              className="text-text-secondary hover:text-text-primary transition-colors"
+            >
+              How it Works
+            </Link>
             <Link
               href="/#features"
               className="text-text-secondary hover:text-text-primary transition-colors"
@@ -46,22 +55,28 @@ export function HomeHeader({ texts = { login: "Login", getStarted: "Get Started"
               Features
             </Link>
             <Link
-              href="/#how-it-works"
-              className="text-text-secondary hover:text-text-primary transition-colors"
-            >
-              How it Works
-            </Link>
-            <Link
-              href="/gallery"
-              className="text-text-secondary hover:text-text-primary transition-colors"
-            >
-              Gallery
-            </Link>
-            <Link
               href="/canvas"
               className="text-text-secondary hover:text-text-primary transition-colors"
             >
               Canvas
+            </Link>
+            <Link
+              href="/#viral-marketing"
+              className="text-text-secondary hover:text-text-primary transition-colors"
+            >
+              Templates
+            </Link>
+            <Link
+              href="/#cta"
+              className="text-text-secondary hover:text-text-primary transition-colors"
+            >
+              Pricing
+            </Link>
+            <Link
+              href="/#faq"
+              className="text-text-secondary hover:text-text-primary transition-colors"
+            >
+              FAQ
             </Link>
           </nav>
           <div className="flex items-center gap-4">

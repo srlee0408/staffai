@@ -1,11 +1,20 @@
+import type { Metadata } from 'next'
 import { LoginForm } from './_components/LoginForm'
 import Link from 'next/link'
+
+export const metadata: Metadata = {
+  title: 'Login',
+  description: 'Sign in to your AISTAFF account to create AI avatars and shopping experiences',
+}
 
 export default function LoginPage() {
   return (
     <div className="relative flex min-h-screen items-center justify-center px-4">
-      <Link href="/" className="absolute top-8 left-8 font-sans text-xl font-bold text-primary tracking-tight hover:opacity-80 transition-opacity">
-        vogue drop
+      <Link href="/" className="absolute top-8 left-8 flex items-center space-x-3 hover:opacity-80 transition-opacity">
+        <div className="w-8 h-8 bg-primary rounded-lg flex items-center justify-center">
+          <i className="ri-robot-line text-white text-lg"></i>
+        </div>
+        <span className="font-sans text-xl font-bold text-white tracking-tight">AISTAFF</span>
       </Link>
       
       <div className="relative mx-auto w-full max-w-md space-y-8">
@@ -14,7 +23,7 @@ export default function LoginPage() {
             Welcome back
           </h1>
           <p className="mt-2 text-base text-text-secondary">
-            Sign in to continue creating amazing fashion videos
+            Sign in to continue creating AI avatars and shopping experiences
           </p>
         </div>
         

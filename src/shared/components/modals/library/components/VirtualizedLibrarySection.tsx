@@ -241,7 +241,7 @@ export const VirtualizedLibrarySection = memo(function VirtualizedLibrarySection
                   const globalIndex = virtualRow.index * GRID_COLUMNS + colIndex;
                   const isSelected = selectedItems.has(clip.id);
                   const selectionOrder = selectedItems.get(clip.id);
-                  const selectionColor = config.theme?.selectionColor || '#38f47cf9';
+                  const selectionColor = config.theme?.selectionColor || '#8dd3c7'; // AISTAFF Secondary
                   
                   return (
                     <div 

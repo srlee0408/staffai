@@ -161,7 +161,7 @@ export function LibraryUpload({ onUploadComplete }: LibraryUploadProps) {
         className={`
           relative w-full rounded-lg transition-all
           ${isDragging 
-            ? 'border-2 border-dashed border-[#38f47cf9] bg-[#38f47cf9]/10' 
+            ? 'border-2 border-dashed border-[#E9967A] bg-[#E9967A]/10' 
             : 'border-2 border-transparent'
           }
         `}
@@ -177,8 +177,8 @@ export function LibraryUpload({ onUploadComplete }: LibraryUploadProps) {
             w-full py-3 rounded-lg transition-colors flex flex-col items-center justify-center gap-2 text-sm font-medium 
             disabled:opacity-50 disabled:cursor-not-allowed 
             ${isDragging 
-              ? 'bg-[#38f47cf9]/20 text-[#38f47cf9]' 
-              : 'bg-[#38f47cf9] text-black hover:bg-[#38f47cf9]/80'
+              ? 'bg-[#E9967A]/20 text-[#E9967A]' 
+              : 'bg-[#E9967A] text-white hover:bg-[#E9967A]/80'
             }
           `}
         >
@@ -207,7 +207,7 @@ export function LibraryUpload({ onUploadComplete }: LibraryUploadProps) {
         <div className="mt-2">
           <div className="w-full bg-gray-700 rounded-full h-2">
             <div 
-              className="bg-[#38f47cf9] h-2 rounded-full transition-all duration-300"
+              className="bg-[#E9967A] h-2 rounded-full transition-all duration-300"
               style={{ 
                 width: `${uploadProgress}%`
               }}

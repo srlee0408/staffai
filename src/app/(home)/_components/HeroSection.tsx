@@ -78,28 +78,23 @@ export function HeroSection({ texts }: HeroSectionProps) {
             </div>
           </div>
           
-          <div className="flex gap-6 justify-center lg:justify-end">
-            <div className="relative hero-image rounded-3xl aspect-[9/16] w-[200px] sm:w-[240px] lg:w-[280px] overflow-hidden animate-float">
+          <div className="relative">
+            <div className="bg-gray-900 rounded-2xl p-8 shadow-2xl">
               <Image 
-                src="https://static.readdy.ai/image/6f7165cfe0b25edc582c9815e9f0cfd2/ffb51a9f9b523f1e494aea016a7d2899.png" 
-                alt="Fashion AI" 
-                className="w-full h-full object-cover rounded-3xl"
-                fill
-                sizes="(max-width: 640px) 200px, (max-width: 1024px) 240px, 280px"
+                src="https://static.readdy.ai/image/6f7165cfe0b25edc582c9815e9f0cfd2/48ff4126c2f770b87a9e1803b78fef5c.png" 
+                alt="AI Avatar Demo" 
+                className="w-full rounded-lg object-cover"
+                width={600}
+                height={400}
                 priority
               />
-              <div className="absolute inset-0 bg-gradient-to-t from-background/50 to-transparent rounded-3xl"></div>
-            </div>
-            <div className="relative hero-image rounded-3xl aspect-[9/16] w-[200px] sm:w-[240px] lg:w-[280px] overflow-hidden animate-float-reverse">
-              <Image 
-                src="https://static.readdy.ai/image/6f7165cfe0b25edc582c9815e9f0cfd2/a0eb3ad9c81f7aa80d8355d320ea7e96.png" 
-                alt="Fashion AI" 
-                className="w-full h-full object-cover rounded-3xl scale-110"
-                fill
-                sizes="(max-width: 640px) 200px, (max-width: 1024px) 240px, 280px"
-                priority
-              />
-              <div className="absolute inset-0 bg-gradient-to-t from-background/50 to-transparent rounded-3xl"></div>
+              <div className="mt-6 flex items-center justify-between">
+                <div className="flex items-center gap-3">
+                  <div className="w-3 h-3 bg-red-500 rounded-full animate-pulse"></div>
+                  <span className="text-white text-sm">Live Shopping Session</span>
+                </div>
+                <div className="text-white text-sm">1,247 viewers</div>
+              </div>
             </div>
           </div>
         </div>

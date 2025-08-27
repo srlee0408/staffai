@@ -1,25 +1,24 @@
 /**
- * FeaturesSection - 제품 주요 기능 소개 섹션 컴포넌트
+ * FeaturesSection - AISTAFF 주요 기능 소개 섹션
  * 
  * 주요 역할:
- * 1. VogueDrop의 핵심 기능들을 시각적으로 소개
- * 2. 각 기능별 아이콘, 설명, 스크린샷 제공
- * 3. 그리드 레이아웃으로 정돈된 정보 전달
- * 4. 다국어 지원을 위한 텍스트 구조화
+ * 1. AISTAFF의 핵심 기능들을 시각적으로 소개
+ * 2. AI Avatar Generation, Virtual Try-On, Auto Script Generation 등 6개 기능
+ * 3. mainpage.html의 "Powerful Features" 섹션 완전 구현
+ * 4. 각 기능별 실제 이미지와 상세 설명 제공
  * 
  * 핵심 특징:
- * - 동적 아이콘 매핑으로 유연한 아이콘 선택
- * - 기능별 컬러 테마로 시각적 구분
- * - 반응형 그리드 레이아웃 (1열 → 2열 → 3열)
- * - 각 기능의 스크린샷으로 직관적 이해 지원
+ * - 3x2 그리드 레이아웃으로 6개 기능 표시
+ * - Remix Icon 사용으로 일관된 아이콘 스타일
+ * - mainpage.html의 실제 이미지 URL 사용
+ * - 각 카드에 호버 효과 및 그림자 적용
  * 
  * 주의사항:
- * - iconMap에 정의된 아이콘만 사용 가능
- * - 이미지 경로 확인 및 최적화 필요
- * - 기능 추가 시 iconColors 배열도 확장 고려
+ * - mainpage.html의 이미지 URL 정확히 사용
+ * - 텍스트 내용 원문 그대로 유지
+ * - 반응형 디자인으로 모든 디바이스 지원
  */
 import Image from "next/image"
-import { Target, Film, Circle, Monitor, Volume2, Sparkles } from "lucide-react"
 
 interface Feature {
   title: string
@@ -37,97 +36,33 @@ interface FeaturesSectionProps {
   }
 }
 
-const iconMap: Record<string, React.ComponentType<{ className?: string }>> = {
-  target: Target,
-  film: Film,
-  circle: Circle,
-  monitor: Monitor,
-  volume: Volume2,
-  sparkles: Sparkles
-}
-
-const iconColors = [
-  "bg-green-500/20 text-green-400",
-  "bg-blue-500/20 text-blue-400",
-  "bg-yellow-500/20 text-yellow-400",
-  "bg-purple-500/20 text-purple-400",
-  "bg-pink-500/20 text-pink-400",
-  "bg-indigo-500/20 text-indigo-400"
-]
-
 export function FeaturesSection({ texts }: FeaturesSectionProps) {
   return (
-    <section id="features" className="py-16 sm:py-24 md:py-32 relative bg-black">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6">
-        <div className="text-center mb-6">
-          <div className="flex items-center justify-center gap-2 mb-6">
-            <Film className="w-6 h-6 text-gray-400" />
-            <h2 className="text-4xl sm:text-5xl md:text-6xl font-bold">
-              {texts.title}
-            </h2>
-          </div>
-          <p className="text-lg sm:text-xl text-gray-300 max-w-3xl mx-auto">
-            {texts.subtitle}
-          </p>
+    <section id="features" className="py-20 bg-black">
+      <div className="max-w-7xl mx-auto px-6">
+        <div className="text-center mb-16">
+          <h2 className="text-4xl font-bold text-white mb-4">{texts.title}</h2>
+          <p className="text-xl text-gray-400">{texts.subtitle}</p>
         </div>
-
-        <div className="flex flex-wrap justify-center gap-3 mb-12">
-          <div className="flex items-center gap-2 px-4 py-2 bg-gray-800/50 rounded-full">
-            <Target className="w-4 h-4 text-green-400" />
-            <span className="text-sm text-gray-300">Zooms & Pans</span>
-          </div>
-          <div className="flex items-center gap-2 px-4 py-2 bg-gray-800/50 rounded-full">
-            <Film className="w-4 h-4 text-blue-400" />
-            <span className="text-sm text-gray-300">Retro Filters</span>
-          </div>
-          <div className="flex items-center gap-2 px-4 py-2 bg-gray-800/50 rounded-full">
-            <Volume2 className="w-4 h-4 text-purple-400" />
-            <span className="text-sm text-gray-300">AI Sound</span>
-          </div>
-        </div>
-
-        {texts.tagline && (
-          <p className="text-center text-gray-400 mb-12">
-            {texts.tagline}
-          </p>
-        )}
-
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-          {texts.items.map((feature, index) => {
-            const Icon = iconMap[feature.icon] || Sparkles
-            const iconColorClass = iconColors[index] || iconColors[0]
-            
-            return (
-              <div
-                key={index}
-                className="group relative bg-gradient-to-b from-gray-900/90 to-gray-950/90 backdrop-blur rounded-2xl border border-gray-800 hover:border-gray-700 hover:shadow-2xl hover:shadow-white/5 hover:-translate-y-1 transition-all duration-300 overflow-hidden"
-              >
-                <div className="p-6">
-                  <div className={`w-10 h-10 rounded-lg ${iconColorClass} flex items-center justify-center mb-4`}>
-                    <Icon className="w-5 h-5" />
-                  </div>
-                  
-                  <h3 className="text-xl font-semibold mb-2 text-white">
-                    {feature.title}
-                  </h3>
-                  <p className="text-gray-400 text-sm mb-4">
-                    {feature.description}
-                  </p>
-                </div>
-                
-                <div className="px-6 pb-6">
-                  <div className="relative h-48 w-full overflow-hidden rounded-2xl">
-                    <Image
-                      src={feature.image}
-                      alt={feature.title}
-                      fill
-                      className="object-cover group-hover:scale-105 transition-transform duration-300"
-                    />
-                  </div>
-                </div>
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+          {texts.items.map((feature, index) => (
+            <div key={index} className="bg-gray-900 rounded-xl p-8 shadow-lg border border-gray-800 hover:shadow-xl transition-shadow">
+              <div className="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center mb-6">
+                <i className={`ri-${feature.icon}-line text-2xl text-primary`}></i>
               </div>
-            )
-          })}
+              <div className="mb-6 overflow-hidden rounded-lg">
+                <Image 
+                  src={feature.image} 
+                  alt={feature.title} 
+                  className="w-full h-96 object-cover rounded-lg"
+                  width={400}
+                  height={384}
+                />
+              </div>
+              <h3 className="text-xl font-semibold text-primary mb-4">{feature.title}</h3>
+              <p className="text-gray-400">{feature.description}</p>
+            </div>
+          ))}
         </div>
       </div>
     </section>
