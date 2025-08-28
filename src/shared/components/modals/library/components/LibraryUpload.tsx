@@ -4,7 +4,7 @@ import { useState, useCallback } from 'react';
 import { Upload, Loader2 } from 'lucide-react';
 import { UserUploadedVideo } from '@/shared/types/video-editor';
 import { extractVideoMetadata, extractVideoThumbnail } from '@/app/video-editor/_utils/video-metadata';
-import { uploadVideo } from '@/lib/api/upload';
+import { uploadVideo } from '@/shared/lib/api/upload';
 
 interface LibraryUploadProps {
   onUploadComplete: (video: UserUploadedVideo) => void;

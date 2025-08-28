@@ -4,8 +4,8 @@
  */
 
 import { useCallback, useRef, useState } from 'react';
-import { ProgressCalculator } from '@/lib/utils/generation-progress';
-import { useErrorHandler, type GenerationError } from '@/lib/generation/error-handler';
+import { ProgressCalculator } from '@/shared/lib/utils/generation-progress';
+import { useErrorHandler, type GenerationError } from '@/shared/lib/generation/error-handler';
 
 export type GenerationType = 'video' | 'image' | 'sound';
 

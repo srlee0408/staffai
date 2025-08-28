@@ -1,5 +1,5 @@
 import { Suspense } from "react"
-import { getGalleryItems, getCategories } from "@/lib/api/gallery"
+import { getGalleryItems, getCategories } from "@/shared/lib/api/gallery"
 import { GalleryPageClient } from "./_components/GalleryPageClient"
 import { GalleryHeader } from "./_components/GalleryHeader"
 import { CategoryFilter } from "./_components/CategoryFilter"

@@ -18,7 +18,7 @@
  * - 프로덕션 환경에서는 적절한 로깅 시스템 필요
  * - 민감한 정보는 로그에서 제외
  */
-import { UserFriendlyError } from '@/lib/errors/user-friendly-errors';
+import { UserFriendlyError } from '@/shared/lib/errors/user-friendly-errors';
 
 export type ApiType = 'video_generation' | 'sound_generation' | 'image_brush';
 

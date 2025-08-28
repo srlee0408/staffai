@@ -2,7 +2,7 @@
 
 import { createContext, useContext, useState, useCallback, useMemo, ReactNode, useEffect, useRef } from 'react';
 import { useSearchParams, useRouter } from 'next/navigation';
-import { loadProject, createNewProject } from '@/lib/api/projects';
+import { loadProject, createNewProject } from '@/shared/lib/api/projects';
 import { getShortId } from '@/shared/lib/utils';
 import type { SaveStatus } from '../_hooks/useManualSave';
 

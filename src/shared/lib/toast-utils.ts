@@ -1,5 +1,5 @@
 import { toast } from 'sonner';
-import { getErrorMessage } from '@/lib/errors/user-friendly-errors';
+import { getErrorMessage } from '@/shared/lib/errors/user-friendly-errors';
 
 export const toastError = (error: unknown, context?: string) => {
   // 개발 환경에서는 콘솔에 에러 로그 출력

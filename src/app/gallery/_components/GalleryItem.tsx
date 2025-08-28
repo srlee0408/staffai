@@ -3,7 +3,7 @@
 import { useState } from "react"
 import { Play } from "lucide-react"
 import Image from "next/image"
-import { getPublicUrl } from "@/infrastructure/supabase/storage"
+import { getPublicUrl } from "@/shared/lib/supabase/storage"
 import type { EffectTemplateWithMedia } from "@/shared/types/database"
 
 interface GalleryItemProps {

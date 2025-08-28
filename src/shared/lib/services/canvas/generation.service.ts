@@ -1,9 +1,9 @@
 import { nanoid } from 'nanoid';
-import { checkDailyGenerationLimit } from '@/lib/db/video-generations';
+import { checkDailyGenerationLimit } from '@/shared/lib/db/video-generations';
 import { uploadBase64Image } from '@/shared/lib/supabase/storage';
 import { createClient } from '@/shared/lib/supabase/server';
 import { createServiceClient } from '@/shared/lib/supabase/service';
-import { createVideoGenerationLogger, measureAndLog } from '@/lib/logging/video-generation-logger';
+import { createVideoGenerationLogger, measureAndLog } from '@/shared/lib/logging/video-generation-logger';
 import { 
   generateVideoRequestSchema, 
   type GenerateVideoRequest, 

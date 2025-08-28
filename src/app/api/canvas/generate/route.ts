@@ -1,8 +1,8 @@
 import { NextRequest, NextResponse } from 'next/server';
-import { generateVideo } from '@/lib/fal-ai';
+import { generateVideo } from '@/shared/lib/ai-services/fal-ai';
 import {
   checkDailyGenerationLimit
-} from '@/lib/db/video-generations';
+} from '@/shared/lib/db/video-generations';
 import { uploadBase64Image } from '@/shared/lib/supabase/storage';
 import { createClient } from '@/shared/lib/supabase/server';
 

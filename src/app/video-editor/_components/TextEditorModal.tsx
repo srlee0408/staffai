@@ -20,7 +20,7 @@ const fontFamilies = FONT_FAMILIES;
 const presetColors = [
   '#000000',
   '#FFFFFF',
-  '#38f47cf9',
+  'rgb(var(--primary))',
   '#3b82f6',
   '#a855f7',
   '#ec4899',
@@ -276,7 +276,7 @@ export default function TextEditorModal({
               <textarea
                 value={content}
                 onChange={(e) => setContent(e.target.value)}
-                className="w-full h-20 bg-gray-900 rounded-lg p-3 text-sm text-white resize-none focus:ring-2 focus:ring-[#38f47cf9] focus:outline-none"
+                className="w-full h-20 bg-gray-900 rounded-lg p-3 text-sm text-white resize-none focus:ring-2 focus:ring-primary focus:outline-none"
                 placeholder="Enter your text..."
               />
             </div>
@@ -290,7 +290,7 @@ export default function TextEditorModal({
                 <select
                   value={style.fontFamily}
                   onChange={(e) => setStyle({ ...style, fontFamily: e.target.value })}
-                  className="w-full bg-gray-900 rounded-lg px-3 py-2 text-sm text-white focus:ring-2 focus:ring-[#38f47cf9] focus:outline-none"
+                  className="w-full bg-gray-900 rounded-lg px-3 py-2 text-sm text-white focus:ring-2 focus:ring-primary focus:outline-none"
                 >
                   {fontFamilies.map((font) => (
                     <option key={font.value} value={font.value}>
@@ -322,7 +322,7 @@ export default function TextEditorModal({
                           }}
                           className={`flex-1 px-2 py-1 text-xs rounded transition-colors ${
                             isActive 
-                              ? 'bg-[#38f47cf9] text-black font-medium' 
+                              ? 'bg-primary text-primary-foreground font-medium' 
                               : 'bg-gray-900 text-gray-300 hover:bg-gray-700'
                           }`}
                         >
@@ -376,7 +376,7 @@ export default function TextEditorModal({
                       key={color}
                       onClick={() => setStyle({ ...style, color })}
                       className={`w-8 h-8 rounded-full border-2 transition-all ${
-                        style.color === color ? 'border-[#38f47cf9] scale-110' : 'border-transparent hover:scale-105'
+                        style.color === color ? 'border-primary scale-110' : 'border-transparent hover:scale-105'
                       }`}
                       style={{ backgroundColor: color }}
                     />
@@ -397,7 +397,7 @@ export default function TextEditorModal({
                     onClick={() => setSelectedEffect(effect.value)}
                     className={`px-2 py-1.5 bg-gray-900 rounded text-xs hover:bg-gray-700 transition-colors ${
                       selectedEffect === effect.value
-                        ? 'ring-2 ring-[#38f47cf9] bg-gray-700'
+                        ? 'ring-2 ring-primary bg-gray-700'
                         : ''
                     }`}
                   >
@@ -416,7 +416,7 @@ export default function TextEditorModal({
                 <button
                   onClick={() => setStyle({ ...style, alignment: 'left' })}
                   className={`flex-1 px-3 py-2 bg-gray-900 rounded text-sm hover:bg-gray-700 transition-colors ${
-                    style.alignment === 'left' ? 'bg-gray-700 ring-2 ring-[#38f47cf9]' : ''
+                    style.alignment === 'left' ? 'bg-gray-700 ring-2 ring-primary' : ''
                   }`}
                 >
                   <i className="ri-align-left text-white"></i>
@@ -424,7 +424,7 @@ export default function TextEditorModal({
                 <button
                   onClick={() => setStyle({ ...style, alignment: 'center' })}
                   className={`flex-1 px-3 py-2 bg-gray-900 rounded text-sm hover:bg-gray-700 transition-colors ${
-                    style.alignment === 'center' ? 'bg-gray-700 ring-2 ring-[#38f47cf9]' : ''
+                    style.alignment === 'center' ? 'bg-gray-700 ring-2 ring-primary' : ''
                   }`}
                 >
                   <i className="ri-align-center text-white"></i>
@@ -432,7 +432,7 @@ export default function TextEditorModal({
                 <button
                   onClick={() => setStyle({ ...style, alignment: 'right' })}
                   className={`flex-1 px-3 py-2 bg-gray-900 rounded text-sm hover:bg-gray-700 transition-colors ${
-                    style.alignment === 'right' ? 'bg-gray-700 ring-2 ring-[#38f47cf9]' : ''
+                    style.alignment === 'right' ? 'bg-gray-700 ring-2 ring-primary' : ''
                   }`}
                 >
                   <i className="ri-align-right text-white"></i>
@@ -522,7 +522,7 @@ export default function TextEditorModal({
             </button>
             <button
               onClick={handleSubmit}
-              className="px-4 py-2 bg-[#38f47cf9] rounded-lg text-black text-sm font-medium hover:bg-[#38f47cf9]/80 transition-colors"
+              className="px-4 py-2 bg-primary rounded-lg text-primary-foreground text-sm font-medium hover:bg-primary/80 transition-colors"
             >
               Add to Timeline
             </button>

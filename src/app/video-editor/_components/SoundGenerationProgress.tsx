@@ -35,7 +35,7 @@ export function SoundGenerationProgress({
       {/* Progress bar container - 상단 진행 바 */}
       <div className="absolute top-0 left-0 right-0 h-2 bg-gray-800/80">
         <div 
-          className="h-full bg-green-500 transition-all duration-500 ease-out relative overflow-hidden"
+          className="h-full bg-primary transition-all duration-500 ease-out relative overflow-hidden"
           style={{ width: `${progress}%` }}
         >
           {/* Animated shine effect */}

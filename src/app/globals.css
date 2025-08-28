@@ -92,6 +92,14 @@
     @apply bg-background text-foreground;
   }
   
+  /* Ensure Lucide icons inherit text color and are visible */
+  svg[class*="lucide"] {
+    width: 1em;
+    height: 1em;
+    stroke: currentColor;
+    fill: none;
+  }
+  
   /* Fix autofill background color for dark theme */
   input:-webkit-autofill,
   input:-webkit-autofill:hover,

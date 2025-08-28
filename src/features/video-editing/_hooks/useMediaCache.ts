@@ -1,5 +1,5 @@
 import { useEffect, useState, useCallback, useRef, useMemo } from 'react';
-import { mediaCache } from '@/lib/cache/media-cache';
+import { mediaCache } from '@/shared/lib/cache/media-cache';
 import { extractVideoMetadata, extractVideoThumbnail } from '@/features/video-editing/_utils/video-metadata';
 
 interface MediaLoadStatus {

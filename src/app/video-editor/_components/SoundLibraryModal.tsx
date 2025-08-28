@@ -6,9 +6,9 @@ import { ChevronDown, ChevronRight, Loader2 } from 'lucide-react';
 import { VideoClipSelector } from './VideoClipSelector';
 import { useVideoSoundGeneration } from '../_hooks/useVideoSoundGeneration';
 import { ClipContext } from '../_context/ClipContext';
-import { formatSoundDisplayTitle } from '@/lib/sound/utils';
+import { formatSoundDisplayTitle } from '@/shared/lib/sound/utils';
 import { SoundGenerationType } from '@/shared/types/sound';
-import { calculateSoundProgress } from '@/lib/utils/generation-progress';
+import { calculateSoundProgress } from '@/shared/lib/utils/generation-progress';
 import { 
   useSoundHistory, 
   useSoundGeneration
@@ -721,7 +721,7 @@ export default function SoundLibraryModal({ onClose, onSelectSounds }: SoundLibr
                           <button
                             onClick={handleSoundGenerate}
                             disabled={soundGenerationMutation.isPending || isGeneratingSound || !soundPrompt.trim()}
-                            className="px-6 py-2 bg-primary rounded-button hover:bg-primary/90 text-black disabled:opacity-50 disabled:cursor-not-allowed flex items-center gap-2 min-w-[120px] justify-center"
+                            className="px-6 py-2 bg-primary rounded-button hover:bg-primary/90 text-primary-foreground disabled:opacity-50 disabled:cursor-not-allowed flex items-center gap-2 min-w-[120px] justify-center"
                           >
                             {(soundGenerationMutation.isPending || isGeneratingSound) ? (
                               <>
@@ -782,7 +782,7 @@ export default function SoundLibraryModal({ onClose, onSelectSounds }: SoundLibr
                         <button
                           onClick={handleSoundGenerate}
                           disabled={soundGenerationMutation.isPending || isGeneratingSound || videoSoundGeneration.isGenerating || !selectedVideoClip}
-                          className="px-6 py-2 bg-primary rounded-button hover:bg-primary/90 text-black disabled:opacity-50 disabled:cursor-not-allowed flex items-center gap-2 min-w-[120px] justify-center"
+                          className="px-6 py-2 bg-primary rounded-button hover:bg-primary/90 text-primary-foreground disabled:opacity-50 disabled:cursor-not-allowed flex items-center gap-2 min-w-[120px] justify-center"
                         >
                           {(soundGenerationMutation.isPending || isGeneratingSound || videoSoundGeneration.isGenerating) ? (
                             <>
@@ -955,7 +955,7 @@ export default function SoundLibraryModal({ onClose, onSelectSounds }: SoundLibr
               <button 
                 onClick={() => fileInputRef.current?.click()}
                 disabled={uploadMusicMutation.isPending}
-                className="px-6 py-2 bg-primary rounded-button text-black hover:bg-primary/90 disabled:opacity-50 disabled:cursor-not-allowed"
+                className="px-6 py-2 bg-primary rounded-button text-primary-foreground hover:bg-primary/90 disabled:opacity-50 disabled:cursor-not-allowed"
               >
                 {uploadMusicMutation.isPending ? 'Uploading...' : 'Browse Files'}
               </button>
@@ -1056,7 +1056,7 @@ export default function SoundLibraryModal({ onClose, onSelectSounds }: SoundLibr
                     ? !selectedPreset 
                     : selectedAudioIds.size === 0
                 }
-                className="px-6 py-2 bg-primary rounded-button hover:bg-primary/90 text-black disabled:opacity-50 disabled:cursor-not-allowed"
+                className="px-6 py-2 bg-primary rounded-button hover:bg-primary/90 text-primary-foreground disabled:opacity-50 disabled:cursor-not-allowed"
               >
                 {activeTab === 'preset' 
                   ? `Add Preset Music` 

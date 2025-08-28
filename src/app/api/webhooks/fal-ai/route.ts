@@ -21,7 +21,7 @@
  */
 import { NextRequest, NextResponse } from 'next/server';
 // import { createClient } from '@/shared/lib/supabase/server';
-import { verifyWebhookSignature, extractWebhookHeaders } from '@/lib/fal-webhook';
+import { verifyWebhookSignature, extractWebhookHeaders } from '@/shared/lib/ai-services/fal-webhook';
 
 interface FalWebhookPayload {
   request_id: string;

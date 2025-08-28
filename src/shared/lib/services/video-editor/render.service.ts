@@ -1,7 +1,7 @@
 import { renderMediaOnLambda, getRenderProgress } from '@remotion/lambda';
 import { AwsRegion } from '@remotion/lambda';
 import { createClient } from '@/shared/lib/supabase/server';
-import { RENDER_CONFIG } from '../../../../remotion.config';
+import { RENDER_CONFIG } from '../../../../../remotion.config';
 import { 
   renderRequestSchema, 
   renderStatusRequestSchema,

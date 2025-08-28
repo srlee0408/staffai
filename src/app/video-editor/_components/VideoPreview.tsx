@@ -678,7 +678,7 @@ export default function VideoPreview({
           ) : (
             /* 빈 상태 표시 */
             <div className="flex-1 flex items-center justify-center">
-              <div className="text-green-500 text-sm">
+              <div className="text-white-500 text-sm">
                 No clips added yet
               </div>
             </div>
@@ -710,7 +710,7 @@ export default function VideoPreview({
                     onClick={() => goToIndex(index)}
                     className={`rounded-full transition-all duration-300 ${
                       isActive 
-                        ? 'bg-[#38f47cf9] w-6 h-1.5' 
+                        ? 'bg-primary w-6 h-1.5' 
                         : 'bg-gray-600 w-1.5 h-1.5 hover:bg-gray-500'
                     }`}
                     aria-label={`Go to clip ${index + 1}`}
@@ -795,7 +795,7 @@ export default function VideoPreview({
                 onClick={() => setSelectedAspectRatio('9:16')}
                 className={`px-2 py-1 rounded text-xs transition-colors ${
                   selectedAspectRatio === '9:16' 
-                    ? 'bg-[#38f47cf9] text-black font-medium' 
+                    ? 'bg-primary text-primary-foreground font-medium' 
                     : 'hover:bg-white/10 text-gray-400'
                 }`}
                 title="Mobile (9:16)"
@@ -806,7 +806,7 @@ export default function VideoPreview({
                 onClick={() => setSelectedAspectRatio('1:1')}
                 className={`px-2 py-1 rounded text-xs transition-colors ${
                   selectedAspectRatio === '1:1' 
-                    ? 'bg-[#38f47cf9] text-black font-medium' 
+                    ? 'bg-primary text-primary-foreground font-medium' 
                     : 'hover:bg-white/10 text-gray-400'
                 }`}
                 title="Square (1:1)"
@@ -817,7 +817,7 @@ export default function VideoPreview({
                 onClick={() => setSelectedAspectRatio('16:9')}
                 className={`px-2 py-1 rounded text-xs transition-colors ${
                   selectedAspectRatio === '16:9' 
-                    ? 'bg-[#38f47cf9] text-black font-medium' 
+                    ? 'bg-primary text-primary-foreground font-medium' 
                     : 'hover:bg-white/10 text-gray-400'
                 }`}
                 title="Wide (16:9)"
@@ -962,7 +962,7 @@ export default function VideoPreview({
                       backgroundColor: 'transparent'
                     }}
                   >
-                    <div className="text-green-500 text-sm text-center">
+                    <div className="text-white-500 text-sm text-center">
                       <div className="mb-2">Add clips to see preview</div>
                       <div className="text-xs text-green-500">
                       

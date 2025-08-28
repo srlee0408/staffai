@@ -564,7 +564,7 @@ export function LibraryModalBase({ isOpen, onClose, config }: LibraryModalBasePr
                   {filteredItems.projects.map((project, index) => {
                     const isSelected = selectedItems.has(project.id.toString());
                     const selectionOrder = selectedItems.get(project.id.toString());
-                    const selectionColor = config.theme?.selectionColor || '#8dd3c7'; // STAFF AI Secondary
+                    const selectionColor = config.theme?.selectionColor || 'rgb(var(--primary))'; // Primary theme color
                     
                     return (
                       <div 
@@ -617,7 +617,7 @@ export function LibraryModalBase({ isOpen, onClose, config }: LibraryModalBasePr
                   {filteredItems.uploads.map((upload, index) => {
                     const isSelected = selectedItems.has(upload.id.toString());
                     const selectionOrder = selectedItems.get(upload.id.toString());
-                    const selectionColor = config.theme?.selectionColor || '#8dd3c7'; // STAFF AI Secondary
+                    const selectionColor = config.theme?.selectionColor || 'rgb(var(--primary))'; // Primary theme color
                     
                     return (
                       <div 
@@ -682,7 +682,7 @@ export function LibraryModalBase({ isOpen, onClose, config }: LibraryModalBasePr
                     disabled={isAdding}
                     className="px-4 py-2 rounded-lg font-medium transition-colors disabled:opacity-50 disabled:cursor-not-allowed"
                     style={{
-                      backgroundColor: config.theme?.primaryColor || '#E9967A', // STAFF AI Primary
+                      backgroundColor: config.theme?.primaryColor || 'rgb(var(--primary))', // Primary theme color
                       color: config.theme?.primaryColor?.startsWith('#38') ? 'black' : 'white'
                     }}
                   >

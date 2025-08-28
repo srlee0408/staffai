@@ -28,9 +28,9 @@ export default function VideoLibraryModal({ isOpen, onClose, onAddToTimeline }: 
       emptyMessage: 'No exported projects available'
     },
     theme: {
-      primaryColor: '#38f47cf9',
+      primaryColor: 'rgb(var(--primary))',
       buttonStyle: 'success',
-      selectionColor: '#38f47cf9'
+      selectionColor: 'rgb(var(--primary))'
     }
   };
 

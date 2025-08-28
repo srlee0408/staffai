@@ -1,6 +1,6 @@
 import { NextRequest, NextResponse } from 'next/server'
-import { createClient as createServerSupabase } from '@/lib/supabase/server'
-import { createServiceClient, ensureServerEnvironment } from '@/lib/supabase/service'
+import { createClient as createServerSupabase } from '@/shared/lib/supabase/server'
+import { createServiceClient, ensureServerEnvironment } from '@/shared/lib/supabase/service'
 
 interface UpdateProfileBody {
   overlap_replace_preference?: 'ask' | 'always_replace' | 'never_replace'

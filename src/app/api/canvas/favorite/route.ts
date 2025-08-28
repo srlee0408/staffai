@@ -1,5 +1,5 @@
 import { NextRequest, NextResponse } from 'next/server';
-import { toggleVideoFavorite } from '@/lib/db/video-generations';
+import { toggleVideoFavorite } from '@/shared/lib/db/video-generations';
 import { createClient } from '@/shared/lib/supabase/server';
 
 export async function PATCH(request: NextRequest) {

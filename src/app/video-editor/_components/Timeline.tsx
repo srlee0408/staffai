@@ -1698,8 +1698,8 @@ export default function Timeline({
                   onClick={() => onAddVideoToLane?.(laneIndex)}
                   className="h-5 bg-black rounded flex items-center justify-center gap-1 hover:bg-gray-900 transition-colors group/add min-w-[60px] px-2"
                 >
-                  <i className="ri-add-line text-[10px] text-[#38f47cf9] group-hover/add:text-white"></i>
-                  <span className="text-[10px] text-[#38f47cf9] group-hover/add:text-white">Add</span>
+                  <i className="ri-add-line text-[10px] text-primary group-hover/add:text-white"></i>
+                  <span className="text-[10px] text-primary group-hover/add:text-white">Add</span>
                 </button>
               </div>
             ))}
@@ -1723,8 +1723,8 @@ export default function Timeline({
                   onClick={() => onAddTextToLane?.(laneIndex)}
                   className="h-5 bg-black rounded flex items-center justify-center gap-1 hover:bg-gray-900 transition-colors group/add min-w-[60px] px-2"
                 >
-                  <i className="ri-add-line text-[10px] text-[#38f47cf9] group-hover/add:text-white"></i>
-                  <span className="text-[10px] text-[#38f47cf9] group-hover/add:text-white">Add</span>
+                  <i className="ri-add-line text-[10px] text-primary group-hover/add:text-white"></i>
+                  <span className="text-[10px] text-primary group-hover/add:text-white">Add</span>
                 </button>
               </div>
             ))}
@@ -1748,8 +1748,8 @@ export default function Timeline({
                   onClick={() => onAddSoundToLane?.(laneIndex)}
                   className="h-6 bg-black rounded flex items-center justify-center gap-1.5 hover:bg-gray-900 transition-colors group/add min-w-[60px] px-2"
                 >
-                  <i className="ri-music-line text-[10px] text-[#38f47cf9] group-hover/add:text-white"></i>
-                  <span className="text-[10px] text-[#38f47cf9] group-hover/add:text-white">Add</span>
+                  <i className="ri-music-line text-[10px] text-primary group-hover/add:text-white"></i>
+                  <span className="text-[10px] text-primary group-hover/add:text-white">Add</span>
                 </button>
               </div>
             ))}
