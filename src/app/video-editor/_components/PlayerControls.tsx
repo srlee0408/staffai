@@ -46,7 +46,7 @@ export function PlayerControls({
     <div className="bg-gray-800 p-4 relative z-[10000] flex-shrink-0">
       <div className="flex flex-col gap-3">
         {/* 진행 바 */}
-        <div className="flex items-center gap-3">
+        <div className="flex-center gap-3">
           <span className="text-white text-sm min-w-[50px]">
             {formatTime(currentTime)}
           </span>
@@ -68,8 +68,8 @@ export function PlayerControls({
         </div>
         
         {/* 컨트롤 버튼들 */}
-        <div className="flex items-center justify-between">
-          <div className="flex items-center gap-4">
+        <div className="flex-between">
+          <div className="flex-center gap-4">
             {/* 재생/일시정지 버튼 */}
             <button
               onClick={onPlayPause}
@@ -87,7 +87,7 @@ export function PlayerControls({
             </button>
             
             {/* 볼륨 컨트롤 */}
-            <div className="flex items-center gap-2">
+            <div className="flex-center gap-2">
               <button
                 onClick={onMuteToggle}
                 className="p-2 text-white hover:text-[#38f47cf9] transition-colors"

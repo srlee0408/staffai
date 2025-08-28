@@ -57,20 +57,20 @@ export function HeroSection({ texts }: HeroSectionProps) {
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 py-24">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
           <div className="text-center lg:text-left">
-            <h1 className="text-5xl sm:text-6xl md:text-7xl font-bold mb-8 leading-tight text-foreground">
+            <h1 className="text-5xl sm:text-6xl md:text-7xl font-bold mb-8 leading-tight">
               {texts.title.line1}
               <span className="block gradient-text">
                 {texts.title.line2}
               </span>
             </h1>
             
-            <p className="text-lg sm:text-xl text-text-secondary mb-12 max-w-xl">
+            <p className="text-lg sm:text-xl text-body-secondary mb-12 max-w-xl">
               {texts.description}
             </p>
 
             <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
               <Link href={user ? "/canvas" : "/login"}>
-                <Button size="lg" className="bg-primary hover:bg-primary/90 text-primary-foreground group w-full sm:w-auto shadow-lg shadow-primary/20 px-8 py-4 text-lg font-semibold">
+                <Button size="lg" className="btn-primary group w-full sm:w-auto shadow-lg shadow-primary/20 px-8 py-4 text-lg font-semibold">
                   {user ? "Go to Canvas" : texts.cta.primary}
                   <ArrowRight className="ml-2 w-4 h-4 group-hover:translate-x-1 transition-transform" />
                 </Button>

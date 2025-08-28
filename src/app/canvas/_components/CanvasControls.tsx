@@ -120,7 +120,7 @@ export function CanvasControls({
     return (
       <div className="relative shrink-0">
         <button
-          className="appearance-none bg-primary text-primary-foreground text-sm font-medium rounded-lg px-4 py-2 hover:bg-primary/90 transition-colors cursor-pointer h-12 flex items-center justify-center gap-2 min-w-[80px]"
+          className="btn-primary h-12 min-w-[80px]"
           onClick={(e) => {
             e.stopPropagation()
             setOpenDropdown(isOpen ? null : id)
@@ -213,7 +213,7 @@ export function CanvasControls({
 
           {/* 음성 선택 */}
           <button
-            className="bg-primary text-primary-foreground text-sm font-medium rounded-lg px-4 py-2 hover:bg-primary/90 transition-colors cursor-pointer h-12 flex items-center gap-2"
+            className="btn-primary h-12"
             onClick={() => onVoiceModalOpen?.()}
           >
             <span>{selectedVoice ? getVoiceName(selectedVoice) : 'No voice'}</span>
@@ -222,7 +222,7 @@ export function CanvasControls({
 
           {/* 아바타 선택 */}
           <button
-            className="bg-primary text-primary-foreground text-sm font-medium rounded-lg px-4 py-2 hover:bg-primary/90 transition-colors cursor-pointer h-12 flex items-center gap-2"
+            className="btn-primary h-12"
             onClick={() => onAvatarModalOpen?.()}
           >
             <span>{selectedAvatar ? getAvatarName(selectedAvatar) : 'No avatar'}</span>
@@ -239,7 +239,7 @@ export function CanvasControls({
 
           {/* Generate 버튼 */}
           <Button
-            className="flex items-center gap-2 px-12 py-3 bg-primary text-primary-foreground text-sm font-medium rounded-lg hover:bg-primary/90 disabled:bg-primary/50 disabled:cursor-not-allowed transition-colors h-12 shrink-0 min-w-[140px]"
+            className="btn-primary h-12 shrink-0 min-w-[140px] px-12"
             onClick={onGenerateClick}
             disabled={!canGenerate}
           >
@@ -249,7 +249,7 @@ export function CanvasControls({
 
           {/* 다운로드 버튼 */}
           <button 
-            className="w-12 h-12 flex items-center justify-center text-text-secondary hover:text-text-primary rounded-lg disabled:opacity-50 disabled:cursor-not-allowed transition-colors hover:bg-surface-secondary shrink-0"
+            className="btn-icon w-12 h-12 shrink-0"
             onClick={onSaveClick}
             disabled={!activeVideo || isSaving}
             title={!activeVideo ? "Select a video to download" : "Download video"}
@@ -276,7 +276,7 @@ export function CanvasControls({
         {showPromptInput && (
           <div className="flex-1 min-w-0">
             <textarea
-              className="w-full bg-surface text-foreground text-sm placeholder-muted-foreground resize-none outline-none border border-border rounded-lg px-4 py-3 min-h-[48px] focus:border-primary focus:ring-1 focus:ring-primary transition-colors"
+              className="textarea-base min-h-[48px]"
               rows={1}
               placeholder="Enter a prompt..."
               value={promptText}
@@ -288,7 +288,7 @@ export function CanvasControls({
         )}
         
         <Button
-          className="flex items-center gap-2 px-12 py-3 bg-primary text-primary-foreground text-sm font-medium rounded-lg hover:bg-primary/90 disabled:bg-primary/50 disabled:cursor-not-allowed transition-colors h-12 shrink-0 min-w-[140px]"
+          className="btn-primary h-12 shrink-0 min-w-[140px] px-12"
           onClick={onGenerateClick || onPromptModalOpen}
           disabled={!canGenerate}
         >
@@ -307,7 +307,7 @@ export function CanvasControls({
         )}
 
         <Button
-          className="flex items-center gap-2 px-4 py-2 bg-surface-secondary hover:bg-surface-tertiary text-text-secondary hover:text-text-primary rounded-lg text-sm transition-colors disabled:opacity-50 disabled:cursor-not-allowed h-12 shrink-0"
+          className="btn-ghost h-12 shrink-0"
           onClick={onImageBrushOpen}
           disabled={!hasUploadedImage}
           variant="ghost"
@@ -318,7 +318,7 @@ export function CanvasControls({
         </Button>
 
         <button 
-          className="w-12 h-12 flex items-center justify-center text-text-secondary hover:text-text-primary rounded-lg disabled:opacity-50 disabled:cursor-not-allowed transition-colors hover:bg-surface-secondary shrink-0"
+          className="btn-icon w-12 h-12 shrink-0"
           onClick={onDownloadClick}
           disabled={!activeVideo || isDownloading}
           title={!activeVideo ? "Select a video to download" : "Download video"}

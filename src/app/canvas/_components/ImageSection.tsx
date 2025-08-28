@@ -91,13 +91,13 @@ export function ImageSection({
 
   return (
     <div className="mb-4">
-      <h2 className="text-sm font-medium mb-3 text-foreground">
+      <h2 className="text-label mb-3">
         {activeTab === 'image' ? 'Item' : 'Image'}
       </h2>
       <div className="flex gap-1.5">
         {/* Upload button - always visible */}
         <button
-          className="w-16 h-16 rounded-md flex items-center justify-center border transition-all bg-primary border-primary hover:bg-primary/90 cursor-pointer group"
+          className="btn-primary w-16 h-16 rounded-md border-primary"
           onClick={handleClick}
           aria-label="Add image"
           title="이미지 업로드"
@@ -138,7 +138,7 @@ export function ImageSection({
       
       {/* 에러 메시지 표시 */}
       {error && (
-        <div className="mt-2 text-xs text-destructive">
+        <div className="mt-2 text-caption text-destructive">
           {error}
         </div>
       )}

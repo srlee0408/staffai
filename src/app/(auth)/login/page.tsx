@@ -9,20 +9,20 @@ export const metadata: Metadata = {
 
 export default function LoginPage() {
   return (
-    <div className="relative flex min-h-screen items-center justify-center px-4">
-      <Link href="/" className="absolute top-8 left-8 flex items-center space-x-3 hover:opacity-80 transition-opacity">
-        <div className="w-8 h-8 bg-primary rounded-lg flex items-center justify-center">
+    <div className="relative flex-center min-h-screen px-4">
+      <Link href="/" className="absolute top-8 left-8 flex-center space-x-3 hover:opacity-80 transition-opacity">
+        <div className="w-8 h-8 bg-primary rounded-lg flex-center">
           <i className="ri-robot-line text-white text-lg"></i>
         </div>
         <span className="font-sans text-xl font-bold text-white tracking-tight">STAFF AI</span>
       </Link>
       
-      <div className="relative mx-auto w-full max-w-md space-y-8">
+      <div className="relative mx-auto w-full max-w-md space-section">
         <div className="text-center">
           <h1 className="text-4xl font-bold tracking-tight text-foreground">
             Welcome back
           </h1>
-          <p className="mt-2 text-base text-text-secondary">
+          <p className="mt-2 text-base text-body-secondary">
             Sign in to continue creating AI avatars and shopping experiences
           </p>
         </div>
@@ -33,7 +33,7 @@ export default function LoginPage() {
             <LoginForm />
             
             <div className="mt-6 text-center text-sm">
-              <span className="text-text-secondary">Don&apos;t have an account? </span>
+              <span className="text-body-secondary">Don&apos;t have an account? </span>
               <Link 
                 href="/signup" 
                 className="font-medium text-primary hover:text-primary/80 transition-colors"

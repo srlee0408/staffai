@@ -1,0 +1,101 @@
+---
+alwaysApply: true
+description: STAFF AI 중앙화된 스타일 시스템 - Key-Value 매핑
+---
+
+# 중앙화된 스타일 시스템 (Key-Value)
+
+모든 스타일은 [globals.css](mdc:src/app/globals.css)에 중앙화되어 있습니다.
+
+## 브랜드 컬러
+- `--primary`: `#E9967A` (STAFF AI Orange)
+- `--secondary`: `#8dd3c7` (STAFF AI Mint)
+
+## 버튼 (Button)
+- `btn-primary`: 주요 액션 버튼 (Orange 배경)
+- `btn-secondary`: 보조 액션 버튼 (Mint 배경)
+- `btn-outline`: 테두리 버튼 (투명 배경)
+- `btn-ghost`: 미니멀 버튼 (호버시만 배경)
+- `btn-destructive`: 삭제/경고 버튼 (빨간색)
+- `btn-icon`: 아이콘 전용 버튼 (정사각형)
+- `btn-sm`: 작은 버튼 크기
+- `btn-lg`: 큰 버튼 크기
+
+## 텍스트 (Text)
+- `text-heading-1`: 대제목 (2xl, bold)
+- `text-heading-2`: 중제목 (xl, semibold)
+- `text-heading-3`: 소제목 (lg, medium)
+- `text-body`: 기본 본문 (sm)
+- `text-body-secondary`: 보조 본문 (sm, muted)
+- `text-caption`: 캡션 (xs, muted)
+- `text-label`: 라벨 (sm, medium)
+- `text-gradient-brand`: 브랜드 그라데이션 텍스트
+
+## 표면 (Surface)
+- `surface-card`: 카드 배경 (둥근 모서리, 그림자)
+- `surface-modal`: 모달 배경 (강한 그림자)
+- `surface-panel`: 패널 배경 (기본)
+- `surface-elevated`: 강조 표면 (중간 그림자)
+
+## 입력 (Input)
+- `input-base`: 기본 입력 필드
+- `input-sm`: 작은 입력 필드
+- `input-error`: 에러 상태 입력
+- `input-success`: 성공 상태 입력
+- `textarea-base`: 기본 텍스트 영역
+- `textarea-prompter`: 프롬프트 전용 텍스트 영역
+
+## 인터랙티브 (Interactive)
+- `hover-lift`: 호버시 위로 이동 효과
+- `hover-glow`: 호버시 글로우 효과
+- `hover-fade`: 호버시 투명도 변화
+- `focus-ring`: 포커스시 링 표시
+- `active-scale`: 클릭시 축소 효과
+
+## 레이아웃 (Layout)
+- `flex-center`: 중앙 정렬 (flex)
+- `flex-between`: 양쪽 정렬 (justify-between)
+- `flex-start`: 시작점 정렬
+- `flex-end`: 끝점 정렬
+- `grid-auto-fit`: 자동 맞춤 그리드
+- `grid-auto-fill`: 자동 채움 그리드
+
+## 그라데이션 (Gradient)
+- `gradient-primary`: Primary 컬러 그라데이션
+- `gradient-secondary`: Secondary 컬러 그라데이션
+- `gradient-brand`: 브랜드 조합 그라데이션
+
+## 상태 (Status)
+- `status-success`: 성공 상태 (초록색)
+- `status-warning`: 경고 상태 (노란색)
+- `status-error`: 에러 상태 (빨간색)
+- `status-info`: 정보 상태 (파란색)
+
+## 로딩 (Loading)
+- `loading-spinner`: 회전 스피너
+- `loading-pulse`: 펄스 애니메이션
+- `loading-skeleton`: 스켈레톤 로딩
+
+## 간격 (Spacing)
+- `space-section`: 섹션 간격 (space-y-6)
+- `space-group`: 그룹 간격 (space-y-4)
+- `space-items`: 아이템 간격 (space-y-2)
+
+## 모달 (Modal)
+- `modal-backdrop`: 모달 배경 오버레이
+- `modal-container`: 모달 컨테이너
+- `modal-content`: 모달 콘텐츠 영역
+
+## 유틸리티 (Utility)
+- `text-truncate`: 한 줄 텍스트 자르기
+- `text-truncate-2`: 두 줄 텍스트 자르기
+- `text-truncate-3`: 세 줄 텍스트 자르기
+- `scrollbar-thin`: 얇은 스크롤바
+
+## 사용법
+```html
+<!-- 조합 사용 예시 -->
+<button class="btn-primary hover-lift active-scale">
+<div class="surface-card space-group">
+<p class="text-body-secondary text-truncate">
+```

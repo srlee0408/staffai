@@ -16,25 +16,25 @@ export default function Error({
   }, [error])
 
   return (
-    <div className="min-h-screen flex flex-col items-center justify-center bg-background">
-      <div className="text-center space-y-4 max-w-md px-4">
+    <div className="min-h-screen flex-center flex-col bg-background">
+      <div className="text-center space-group max-w-md px-4">
         <h1 className="text-4xl font-bold text-foreground">
           Something went wrong
         </h1>
-        <p className="text-text-secondary">
+        <p className="text-body-secondary">
           An unexpected error occurred. Please try again later.
         </p>
         <div className="pt-4">
           <Button
             onClick={reset}
-            className="bg-primary text-primary-foreground hover:bg-primary/90"
+            className="btn-primary"
           >
             Try again
           </Button>
         </div>
         {process.env.NODE_ENV === 'development' && (
           <div className="mt-8 p-4 bg-surface-secondary rounded-lg text-left">
-            <p className="text-xs text-text-secondary font-mono">
+            <p className="text-caption font-mono">
               {error.message}
             </p>
           </div>

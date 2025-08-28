@@ -38,7 +38,7 @@ export function PrompterSection({
           <div className="space-y-3">
             {/* Prompt Input */}
             <div className="space-y-2">
-              <label htmlFor="prompt-input" className="text-xs font-medium text-foreground">
+              <label htmlFor="prompt-input" className="text-caption font-medium">
                 Enter your prompt
               </label>
               <textarea
@@ -50,7 +50,7 @@ export function PrompterSection({
                 className="textarea-prompter"
                 maxLength={500}
               />
-              <div className="flex justify-between text-xs text-muted-foreground">
+              <div className="flex justify-between text-caption">
                 <span>Use descriptive words for better results</span>
                 <span>{promptText.length}/500</span>
               </div>

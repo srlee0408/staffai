@@ -141,7 +141,7 @@ export default function TimelineControls({
 
         {/* 재생/일시정지 버튼 */}
         <button
-          className="w-10 h-10 flex items-center justify-center rounded-full bg-primary hover:bg-primary/90 transition-colors text-primary-foreground relative group"
+          className="btn-primary w-10 h-10 rounded-full relative group"
           onClick={onPlayPause}
           title={isPlaying ? '일시정지 (Pause)' : '재생 (Play)'}
         >
