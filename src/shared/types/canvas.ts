@@ -24,6 +24,12 @@ export interface GeneratedVideo {
   createdAt: Date;
   thumbnail?: string;
   isFavorite?: boolean;
+  duration?: number;  // 영상 길이 (초 단위)
+  metadata?: {
+    type?: 'script' | 'audio';
+    script?: string;
+    audioFile?: string;
+  };
 }
 
 export interface EffectTemplate {

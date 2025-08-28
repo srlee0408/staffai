@@ -8,7 +8,7 @@ type SaveStatus = 'idle' | 'saving' | 'saved' | 'error'
 
 interface HeaderProps {
   onLibraryClick?: () => void
-  activePage?: 'create' | 'edit'
+  activePage?: 'create' | 'script' | 'edit'
   projectTitle?: string
   onEditClick?: () => void
   onProjectTitleChange?: (title: string) => void
@@ -195,13 +195,23 @@ export function Header({
         >
           Create
         </Link>
+        <Link 
+          href="/script" 
+          className={`font-medium text-sm transition-colors ${
+            activePage === 'script' 
+              ? 'text-primary hover:text-primary/80' 
+              : 'text-text-secondary hover:text-text-primary'
+          }`}
+        >
+          Script
+        </Link>
         <button 
           className={`font-medium text-sm transition-colors ${
             activePage === 'edit' 
               ? 'text-primary hover:text-primary/80' 
               : 'text-text-secondary hover:text-text-primary'
           }`}
-          onClick={activePage === 'create' ? onEditClick : undefined}
+          onClick={onEditClick}
         >
           Edit
         </button>
