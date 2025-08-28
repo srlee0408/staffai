@@ -110,7 +110,7 @@ export function CanvasLayout(): React.ReactElement {
     <div className="min-h-screen flex flex-col bg-background text-foreground">
       <Header
         onLibraryClick={() => modals.openModal('library')}
-        activePage="clip"
+        activePage="create"
         onEditClick={() => setShowProjectSelector(true)}
       />
 

@@ -8,7 +8,7 @@ type SaveStatus = 'idle' | 'saving' | 'saved' | 'error'
 
 interface HeaderProps {
   onLibraryClick?: () => void
-  activePage?: 'clip' | 'edit'
+  activePage?: 'create' | 'edit'
   projectTitle?: string
   onEditClick?: () => void
   onProjectTitleChange?: (title: string) => void
@@ -19,7 +19,7 @@ interface HeaderProps {
 
 export function Header({ 
   onLibraryClick, 
-  activePage = 'clip',
+  activePage = 'create',
   projectTitle,
   onEditClick,
   onProjectTitleChange,
@@ -186,14 +186,14 @@ export function Header({
       </div>
       <div className="flex space-x-8">
         <Link 
-          href="/canvas" 
+          href="/canvas?tab=image" 
           className={`font-medium text-sm transition-colors ${
-            activePage === 'clip' 
+            activePage === 'create' 
               ? 'text-primary hover:text-primary/80' 
               : 'text-text-secondary hover:text-text-primary'
           }`}
         >
-          Clip
+          Create
         </Link>
         <button 
           className={`font-medium text-sm transition-colors ${
@@ -201,7 +201,7 @@ export function Header({
               ? 'text-primary hover:text-primary/80' 
               : 'text-text-secondary hover:text-text-primary'
           }`}
-          onClick={activePage === 'clip' ? onEditClick : undefined}
+          onClick={activePage === 'create' ? onEditClick : undefined}
         >
           Edit
         </button>

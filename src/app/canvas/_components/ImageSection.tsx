@@ -7,12 +7,14 @@ interface ImageSectionProps {
   uploadedImage?: string | null;
   onImageUpload?: (imageUrl: string) => void;
   onImageRemove?: () => void;
+  activeTab?: 'image' | 'video';
 }
 
 export function ImageSection({ 
   uploadedImage = null,
   onImageUpload,
-  onImageRemove
+  onImageRemove,
+  activeTab = 'video'
 }: ImageSectionProps) {
   const [localImage, setLocalImage] = useState<string | null>(uploadedImage);
   const [error, setError] = useState<string | null>(null);
@@ -89,7 +91,9 @@ export function ImageSection({
 
   return (
     <div className="mb-4">
-      <h2 className="text-sm font-medium mb-3 text-foreground">Image</h2>
+      <h2 className="text-sm font-medium mb-3 text-foreground">
+        {activeTab === 'image' ? 'Item' : 'Image'}
+      </h2>
       <div className="flex gap-1.5">
         {/* Upload button - always visible */}
         <button

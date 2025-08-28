@@ -1,9 +1,11 @@
 'use client'
 
 import { useState, useEffect } from 'react'
+import { useSearchParams } from 'next/navigation'
 import { Header } from '@/shared/components/layout/Header'
 import { LeftPanel } from './LeftPanel'
 import { Canvas } from './Canvas'
+import { CanvasControls } from './CanvasControls'
 import { CanvasModals } from './CanvasModals'
 import {
   useSlot,
@@ -23,7 +25,12 @@ import type { GeneratedVideo } from '@/shared/types/canvas'
  * Context를 활용하여 모든 상태와 로직을 통합 관리
  */
 export function CanvasLayout(): React.ReactElement {
+  const searchParams = useSearchParams()
   const [showProjectSelector, setShowProjectSelector] = useState(false)
+  
+  // URL 파라미터에서 초기 탭 설정 (기본값: image)
+  const initialTab = searchParams.get('tab') === 'video' ? 'video' : 'image'
+  const [activeTab, setActiveTab] = useState<'image' | 'video'>(initialTab)
   
   // 분리된 Context들에서 필요한 상태만 구독
   const { modals } = useModals();
@@ -110,7 +117,7 @@ export function CanvasLayout(): React.ReactElement {
     <div className="min-h-screen flex flex-col bg-background text-foreground">
       <Header
         onLibraryClick={() => modals.openModal('library')}
-        activePage="clip"
+        activePage="create"
         onEditClick={() => setShowProjectSelector(true)}
       />
 
@@ -129,61 +136,75 @@ export function CanvasLayout(): React.ReactElement {
           onEffectModalOpen={() => modals.openModal('effect')}
           selectedEffects={effects.selectedEffects}
           onEffectRemove={effects.removeEffect}
+          activeTab={activeTab}
+          onTabChange={setActiveTab}
         />
 
-        <Canvas
-          selectedResolution={settings.selectedResolution}
-          selectedSize={settings.selectedSize}
-          onPromptModalOpen={() => modals.openModal('prompt')}
-          showControls={true}
-          slotContents={slotManager.slotContents}
-          slotStates={slotManager.slotStates}
-          onVideoSelect={handleVideoSelect}
-          onGenerateClick={videoGeneration.generateVideo}
-          isGenerating={videoGeneration.isGenerating}
-          canGenerate={videoGeneration.canGenerate}
-          selectedDuration={settings.selectedDuration}
-          onDurationChange={(duration: string) =>
-            settings.updateSettings({ selectedDuration: duration })
-          }
-          generatingProgress={videoGeneration.generatingProgress}
-          generatingJobIds={videoGeneration.generatingJobIds}
-          onRemoveContent={handleRemoveContent}
-          onSlotSelect={slotManager.handleSlotSelect}
-          selectedSlotIndex={slotManager.selectedSlotIndex}
-          activeVideo={slotManager.activeVideo}
-          onDownloadClick={handleDownload}
-          isDownloading={isDownloading}
-          favoriteVideos={favorites.favoriteIds}
-          onToggleFavorite={handleToggleFavorite}
-          onImageBrushOpen={() => {
-            // 현재 이미지가 있는 슬롯 인덱스를 찾아서 저장
-            let foundIndex: number | null = null
-            
-            // 방법 1: selectedSlotIndex 사용 (우선순위)
-            if (slotManager.selectedSlotIndex !== null) {
-              const selectedSlot = slotManager.slotContents[slotManager.selectedSlotIndex]
-              if (selectedSlot?.type === 'image') {
-                foundIndex = slotManager.selectedSlotIndex
+        <div className="flex-1 flex flex-col">
+          <Canvas
+            slotContents={slotManager.slotContents}
+            slotStates={slotManager.slotStates}
+            onVideoSelect={handleVideoSelect}
+            isGenerating={videoGeneration.isGenerating}
+            generatingProgress={videoGeneration.generatingProgress}
+            generatingJobIds={videoGeneration.generatingJobIds}
+            onRemoveContent={handleRemoveContent}
+            onSlotSelect={slotManager.handleSlotSelect}
+            selectedSlotIndex={slotManager.selectedSlotIndex}
+            favoriteVideos={favorites.favoriteIds}
+            onToggleFavorite={handleToggleFavorite}
+            activeTab={activeTab}
+          />
+
+          {/* Fixed Controls - Always visible at bottom */}
+          <div className="flex justify-center p-4 bg-background">
+            <CanvasControls
+              selectedResolution={settings.selectedResolution}
+              selectedSize={settings.selectedSize}
+              onPromptModalOpen={() => modals.openModal('prompt')}
+              onGenerateClick={videoGeneration.generateVideo}
+              canGenerate={videoGeneration.canGenerate}
+              selectedDuration={settings.selectedDuration}
+              onDurationChange={(duration: string) =>
+                settings.updateSettings({ selectedDuration: duration })
               }
-            }
-            
-            // 방법 2: currentGeneratingImage와 일치하는 슬롯 찾기
-            if (foundIndex === null && currentGeneratingImage) {
-              for (let i = 0; i < slotManager.slotContents.length; i++) {
-                const slot = slotManager.slotContents[i]
-                if (slot?.type === 'image') {
-                  foundIndex = i  // 첫 번째 이미지 슬롯 사용
-                  break
+              onDownloadClick={handleDownload}
+              activeVideo={slotManager.activeVideo}
+              isDownloading={isDownloading}
+              onImageBrushOpen={() => {
+                // 현재 이미지가 있는 슬롯 인덱스를 찾아서 저장
+                let foundIndex: number | null = null
+                
+                // 방법 1: selectedSlotIndex 사용 (우선순위)
+                if (slotManager.selectedSlotIndex !== null) {
+                  const selectedSlot = slotManager.slotContents[slotManager.selectedSlotIndex]
+                  if (selectedSlot?.type === 'image') {
+                    foundIndex = slotManager.selectedSlotIndex
+                  }
                 }
-              }
-            }
-            
-            setCurrentEditingSlotIndex(foundIndex)
-            modals.openModal('imageBrush')
-          }}
-          hasUploadedImage={!!currentGeneratingImage}
-        />
+                
+                // 방법 2: currentGeneratingImage와 일치하는 슬롯 찾기
+                if (foundIndex === null && currentGeneratingImage) {
+                  for (let i = 0; i < slotManager.slotContents.length; i++) {
+                    const slot = slotManager.slotContents[i]
+                    if (slot?.type === 'image') {
+                      foundIndex = i  // 첫 번째 이미지 슬롯 사용
+                      break
+                    }
+                  }
+                }
+                
+                setCurrentEditingSlotIndex(foundIndex)
+                modals.openModal('imageBrush')
+              }}
+              hasUploadedImage={!!currentGeneratingImage}
+              promptText={settings.promptText}
+              onPromptChange={(text: string) => settings.updateSettings({ promptText: text })}
+              showPromptInput={true}
+              activeTab={activeTab}
+            />
+          </div>
+        </div>
       </div>
 
       <CanvasModals />
