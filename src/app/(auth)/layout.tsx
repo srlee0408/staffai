@@ -2,7 +2,7 @@ import type { Metadata } from 'next'
 
 export const metadata: Metadata = {
   title: {
-    template: '%s | AISTAFF',
+    template: '%s | STAFF AI',
     default: 'Authentication',
   },
   description: 'Sign in or create an account to start creating AI avatars and shopping experiences',

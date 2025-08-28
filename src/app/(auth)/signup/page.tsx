@@ -4,7 +4,7 @@ import Link from 'next/link'
 
 export const metadata: Metadata = {
   title: 'Sign Up',
-  description: 'Create your AISTAFF account to start building AI avatars and shopping experiences',
+  description: 'Create your STAFF AI account to start building AI avatars and shopping experiences',
 }
 
 export default function SignupPage() {
@@ -14,7 +14,7 @@ export default function SignupPage() {
         <div className="w-8 h-8 bg-primary rounded-lg flex items-center justify-center">
           <i className="ri-robot-line text-white text-lg"></i>
         </div>
-        <span className="font-sans text-xl font-bold text-white tracking-tight">AISTAFF</span>
+        <span className="font-sans text-xl font-bold text-white tracking-tight">STAFF AI</span>
       </Link>
       
       <div className="relative mx-auto w-full max-w-md space-y-8">
@@ -23,7 +23,7 @@ export default function SignupPage() {
             Create your account
           </h1>
           <p className="mt-2 text-base text-text-secondary">
-            Join AISTAFF to start creating AI avatars and shopping experiences
+            Join STAFF AI to start creating AI avatars and shopping experiences
           </p>
         </div>
         

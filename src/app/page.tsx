@@ -9,24 +9,24 @@ import { Footer } from "./(home)/_components/Footer"
 import homeTexts from "@/locales/en/home.json"
 
 export const metadata: Metadata = {
-  title: "AISTAFF - AI Avatars Host 24/7 Shopping Podcasts In-Store & Online",
+  title: "STAFF AI - AI Avatars Host 24/7 Shopping Podcasts In-Store & Online",
   description: "Create custom avatars, showcase products, and generate shopping videos. Embed real-time in stores and websites for seamless customer experiences. 100% AI-Generated Viral Marketing Videos.",
   keywords: "AI avatars, 24/7 shopping, viral marketing videos, brand promotion, product marketing, try-on video, AI script generation, virtual try-on, auto script generation",
   openGraph: {
-    title: "AISTAFF - AI Avatars Host 24/7 Shopping Podcasts In-Store & Online",
+    title: "STAFF AI - AI Avatars Host 24/7 Shopping Podcasts In-Store & Online",
     description: "Create custom avatars, showcase products, and generate shopping videos. Embed real-time in stores and websites for seamless customer experiences.",
     images: [
       {
         url: "https://static.readdy.ai/image/6f7165cfe0b25edc582c9815e9f0cfd2/48ff4126c2f770b87a9e1803b78fef5c.png",
         width: 1200,
         height: 630,
-        alt: "AISTAFF AI Avatar Demo - Live Shopping Session",
+        alt: "STAFF AI AI Avatar Demo - Live Shopping Session",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "AISTAFF - AI Avatars Host 24/7 Shopping Podcasts",
+    title: "STAFF AI - AI Avatars Host 24/7 Shopping Podcasts",
     description: "Create custom avatars, showcase products, and generate shopping videos. 100% AI-Generated Viral Marketing Videos.",
     images: ["https://static.readdy.ai/image/6f7165cfe0b25edc582c9815e9f0cfd2/48ff4126c2f770b87a9e1803b78fef5c.png"],
   },
@@ -37,7 +37,7 @@ export const metadata: Metadata = {
 export const revalidate = 60
 
 /**
- * AISTAFF 홈페이지 - AI 아바타 쇼핑 경험 플랫폼
+ * STAFF AI 홈페이지 - AI 아바타 쇼핑 경험 플랫폼
  * 
  * 주요 역할:
  * 1. AI 아바타 기반 쇼핑 서비스 소개
@@ -52,7 +52,7 @@ export const revalidate = 60
  * - 다국어 지원 (20개 이상 언어)
  * 
  * 주의사항:
- * - AISTAFF 브랜딩 일관성 유지
+ * - STAFF AI 브랜딩 일관성 유지
  * - AI 기술의 전문성과 신뢰성 강조
  * - 사용자 친화적 FAQ 제공
  */

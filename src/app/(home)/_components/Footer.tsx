@@ -31,7 +31,7 @@ export function Footer({ texts }: FooterProps) {
               <div className="w-8 h-8 bg-primary rounded-lg flex items-center justify-center">
                 <i className="ri-robot-line text-white text-lg"></i>
               </div>
-              <span className="text-xl sm:text-2xl font-bold text-white tracking-tight">AISTAFF</span>
+              <span className="text-xl sm:text-2xl font-bold text-white tracking-tight">STAFF AI</span>
             </div>
             <p className="text-sm sm:text-base text-gray-400">
               {texts.tagline}

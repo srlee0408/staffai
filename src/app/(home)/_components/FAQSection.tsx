@@ -2,7 +2,7 @@
  * FAQSection - Frequently Asked Questions 섹션
  * 
  * 주요 역할:
- * 1. AISTAFF 서비스에 대한 자주 묻는 질문과 답변 제공
+ * 1. STAFF AI 서비스에 대한 자주 묻는 질문과 답변 제공
  * 2. 아코디언 형태의 인터랙티브 UI로 사용자 경험 향상
  * 3. 서비스 이해도 증진 및 사용자 우려사항 해소
  * 
@@ -37,15 +37,15 @@ const faqItems: FAQItem[] = [
     answer: "Yes! Our real-time embedding technology allows you to update product information, prices, and availability instantly across all platforms without regenerating videos. Changes appear immediately on your website and in-store displays."
   },
   {
-    question: "What languages does AISTAFF support?",
-    answer: "AISTAFF supports over 50 languages including English, Spanish, French, German, Japanese, Korean, Chinese, and many more. Each avatar can speak multiple languages with native-like pronunciation and regional accents."
+    question: "What languages does STAFF AI support?",
+    answer: "STAFF AI supports over 50 languages including English, Spanish, French, German, Japanese, Korean, Chinese, and many more. Each avatar can speak multiple languages with native-like pronunciation and regional accents."
   },
   {
     question: "Do I own the rights to my AI avatar and content?",
     answer: "Absolutely. You retain full commercial rights to your custom AI avatars and all generated content. We provide clear licensing terms and ensure your brand assets remain your intellectual property."
   },
   {
-    question: "How difficult is it to embed AISTAFF into my website?",
+    question: "How difficult is it to embed STAFF AI into my website?",
     answer: "Integration is extremely simple. Just copy and paste a single line of code into your website. We provide plugins for popular platforms like Shopify, WordPress, and WooCommerce. No technical expertise required."
   }
 ];
@@ -66,7 +66,7 @@ export function FAQSection() {
       <div className="max-w-4xl mx-auto px-6">
         <div className="text-center mb-16">
           <h2 className="text-4xl font-bold text-white mb-4">Frequently Asked Questions</h2>
-          <p className="text-xl text-gray-400">Everything you need to know about AISTAFF</p>
+          <p className="text-xl text-gray-400">Everything you need to know about STAFF AI</p>
         </div>
         <div className="space-y-4">
           {faqItems.map((item, index) => (

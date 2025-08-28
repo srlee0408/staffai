@@ -1,5 +1,5 @@
 /**
- * FeaturesSection - AISTAFF 주요 기능 소개 섹션
+ * FeaturesSection - STAFF AI 주요 기능 소개 섹션
  * 
  * 주요 역할:
  * 1. AISTAFF의 핵심 기능들을 시각적으로 소개

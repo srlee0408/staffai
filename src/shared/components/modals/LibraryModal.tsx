@@ -47,9 +47,9 @@ export function LibraryModal({
       enabled: true
     },
     theme: {
-      primaryColor: '#E9967A', // AISTAFF Primary Color
+      primaryColor: '#E9967A', // STAFF AI Primary Color
       buttonStyle: 'success',
-      selectionColor: '#8dd3c7' // AISTAFF Secondary Color
+      selectionColor: '#8dd3c7' // STAFF AI Secondary Color
     },
     onProjectSwitch,  // 레거시 지원을 위해 유지
     currentProjectName

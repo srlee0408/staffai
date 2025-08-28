@@ -27,25 +27,25 @@ const geistMono = Geist_Mono({
 // This ensures consistency between preview and Lambda rendering
 
 export const metadata: Metadata = {
-  title: "AISTAFF - AI Avatars for 24/7 Shopping Experiences",
+  title: "STAFF AI - AI Avatars for 24/7 Shopping Experiences",
   description: "Create custom AI avatars, showcase products, and generate shopping videos. Embed real-time in stores and websites for seamless customer experiences.",
   keywords: "AI avatars, shopping experience, virtual try-on, product marketing, AI video generation, brand promotion, 24/7 shopping, AI influencer",
-  authors: [{ name: "AISTAFF" }],
-  creator: "AISTAFF",
-  publisher: "AISTAFF",
+  authors: [{ name: "STAFF AI" }],
+  creator: "STAFF AI",
+  publisher: "STAFF AI",
   robots: "index, follow",
   openGraph: {
-    title: "AISTAFF - AI Avatars for 24/7 Shopping Experiences",
+    title: "STAFF AI - AI Avatars for 24/7 Shopping Experiences",
     description: "Create custom AI avatars, showcase products, and generate shopping videos. Embed real-time in stores and websites for seamless customer experiences.",
     type: "website",
     locale: "en_US",
-    siteName: "AISTAFF",
+    siteName: "STAFF AI",
   },
   twitter: {
     card: "summary_large_image",
-    title: "AISTAFF - AI Avatars for 24/7 Shopping Experiences",
+    title: "STAFF AI - AI Avatars for 24/7 Shopping Experiences",
     description: "Create custom AI avatars, showcase products, and generate shopping videos. Embed real-time in stores and websites for seamless customer experiences.",
-    creator: "@aistaff",
+    creator: "@STAFF AI",
   },
 };
 

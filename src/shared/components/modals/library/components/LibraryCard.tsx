@@ -91,7 +91,7 @@ export const LibraryCard = memo(function LibraryCard({
   const videoUrl = getVideoUrl();
   const thumbnailUrl = getThumbnailUrl();
   const title = getTitle();
-  const selectionColor = theme?.selectionColor || '#8dd3c7'; // AISTAFF Secondary
+  const selectionColor = theme?.selectionColor || '#8dd3c7'; // STAFF AI Secondary
 
   // 카드 클릭 핸들러
   const handleCardClick = () => {

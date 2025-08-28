@@ -169,7 +169,7 @@ export const LibrarySection = memo(function LibrarySection({
         {items.map((clip, index) => {
           const isSelected = selectedItems.has(clip.id);
           const selectionOrder = selectedItems.get(clip.id);
-          const selectionColor = config.theme?.selectionColor || '#8dd3c7'; // AISTAFF Secondary
+          const selectionColor = config.theme?.selectionColor || '#8dd3c7'; // STAFF AI Secondary
           
           return (
             <div 

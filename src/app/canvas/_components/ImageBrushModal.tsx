@@ -558,7 +558,7 @@ export function ImageBrushModal({
       const url = window.URL.createObjectURL(blob)
       const link = document.createElement('a')
       link.href = url
-      link.download = `aistaff-image-brush-${Date.now()}.png`
+      link.download = `STAFF AI-image-brush-${Date.now()}.png`
       
       // Trigger download
       document.body.appendChild(link)
